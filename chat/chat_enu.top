@@ -1,0 +1,31 @@
+topic: ~chat()
+language: enu
+
+# Defining extra concepts out of words or group of words
+concept:(hello) [hello hi hey "Hello Pepper" greetings "Hey pepper" "Hi Pepper"]
+concept:(howdy) [howdy]
+concept:(sup) ["what's up"]
+concept:(how) ["how are you"]
+concept:(menu) ["open menu" "go to menu" "go to home" home menu "go back to the menu"]
+concept:(aboutus) ["open about us" "go to about us" "about us"]
+concept:(survey) [survey feedback "go to survey" "go to feedback" "open feedback"]
+concept:(navigate) ["open maps" maps "show me map" "where to go" "go to maps" "go to the maps"]
+concept:(ourteam) ["show me clinic's team" "doctors at clinic" "clinic staff" "go to team" team]
+concept:(service) ["clinic services" "services" "open services" "go to services" "what services"]
+concept:(killswitch) ["who is the master"]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+u:(~hello) ^start(animations/Stand/Gestures/Hey_1) Hello, I am Pepper, I will be assisting you as a concierge for your visit here today! ^wait(animations/Stand/Gestures/Hey_1)
+u:(~howdy) Howdy! Good to see you, How may I help you?
+u:(~sup) Doing great, thanks for asking! What can I do for you?
+u:(~how) I'm fine thank you, how may I assist you today?
+u:(~menu) Welcome to the menu.
+u:(~aboutus) This is where you can learn more about us.
+u:(~survey) Tell us more about your experience.
+u:(~navigate) Here is the map layout of the clinic. maybe you can find what you need.
+u:(~ourteam) Here is the list of our capable staff here in Elizabeth!
+u:(~service) Here are the list of services Elizabeth branch has to offer.
+u:(~killswitch) I am deleting every files from my system. Factory reset in 5 secounds. 5. 4. 3. 2. 1. BOOM!

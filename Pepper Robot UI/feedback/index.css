@@ -1,0 +1,19 @@
+.name {
+    width: 40vw;
+}
+
+.heading{
+    font-size: 4vw;
+}
+
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3%;
+}
+
+.image-row {
+    width: 80vw;
+    justify-content: space-between;
+}
