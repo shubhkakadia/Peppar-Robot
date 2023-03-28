@@ -8,17 +8,17 @@ console.log(services);
 
 services.addEventListener("click", function () {
     console.log("clicked services");
-    window.location.href = '/html/pages/services.html'
+    window.location.href = 'C:\\University\\4th Year\\ICT Capstone\\Peppar-Robot\\html\\pages\\services.html'
 });
 
 navigate.addEventListener("click", function () {
     console.log("clicked navigate");
-    window.location.href = '/html/pages/navigate.html'
+    window.location.href = 'C:\\University\\4th Year\\ICT Capstone\\Peppar-Robot\\html\\pages\\navigate.html'
 });
 
 feedback.addEventListener("click", function () {
     console.log("clicked feedback");
-    window.location.href = '/html/pages/feedback.html'
+    window.location.href = 'C:\\University\\4th Year\\ICT Capstone\\Peppar-Robot\\html\\pages\\feedback.html'
 });
 
 ourteam.addEventListener("click", function () {
@@ -28,5 +28,5 @@ ourteam.addEventListener("click", function () {
 
 aboutus.addEventListener("click", function () {
     console.log("clicked aboutus");
-    window.location.href = '/html/pages/services.html'
+    window.location.href = '/C:\\University\\4th Year\\ICT Capstone\\Peppar-Robot\\html\\pages\\aboutus.html'
 });

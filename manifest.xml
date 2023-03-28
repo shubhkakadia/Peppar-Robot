@@ -19,7 +19,7 @@
    <permissions/>
   </behaviorContent>
   <dialogContent typeVersion="1.0" topicName="chat">
-   <topic language="en_US" path="chat/chat_enu.top"/>
+   <topic path="chat/chat_enu.top" language="en_US"/>
   </dialogContent>
  </contents>
  <requirements>
