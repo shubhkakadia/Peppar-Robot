@@ -8,7 +8,11 @@ console.log(services);
 
 services.addEventListener("click", function () {
     console.log("clicked services");
+<<<<<<< HEAD
     window.location.href = 'services.html'
+=======
+    window.location.href = 'C:\\University\\4th Year\\ICT Capstone\\Peppar-Robot\\html\\pages\\services.html'
+>>>>>>> 5958bc61434a4a3543a5b99597eb5f73c0d711a8
 });
 
 navigate.addEventListener("click", function () {

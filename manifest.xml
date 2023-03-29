@@ -18,8 +18,13 @@
    <nature>interactive</nature>
    <permissions/>
   </behaviorContent>
+<<<<<<< HEAD
   <dialogContent topicName="chat" typeVersion="1.0">
    <topic language="en_US" path="chat/chat_enu.top"/>
+=======
+  <dialogContent typeVersion="1.0" topicName="chat">
+   <topic path="chat/chat_enu.top" language="en_US"/>
+>>>>>>> 5958bc61434a4a3543a5b99597eb5f73c0d711a8
   </dialogContent>
  </contents>
  <requirements>

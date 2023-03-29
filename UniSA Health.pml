@@ -32,10 +32,17 @@
         <File name="index" src="html/index.html" />
         <File name="launch" src=".vscode/launch.json" />
         <File name="settings" src=".vscode/settings.json" />
+<<<<<<< HEAD
         <File name="aboutus" src="html/css/aboutus.css" />
         <File name="dashboard" src="html/js/dashboard.js" />
         <File name="menu" src="html/js/menu.js" />
         <File name="aboutus" src="html/pages/aboutus.html" />
+=======
+        <File name="dashboard" src="html/js/dashboard.js" />
+        <File name="menu" src="html/js/menu.js" />
+        <File name="aboutus" src="html/pages/aboutus.html" />
+        <File name="aboutus" src="html/css/aboutus.css" />
+>>>>>>> 5958bc61434a4a3543a5b99597eb5f73c0d711a8
     </Resources>
     <Topics>
         <Topic name="chat_enu" src="chat/chat_enu.top" topicName="chat" language="en_US" />
