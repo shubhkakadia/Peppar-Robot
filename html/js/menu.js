@@ -17,20 +17,20 @@ services.addEventListener("click", function () {
 
 navigate.addEventListener("click", function () {
     console.log("clicked navigate");
-    window.location.href = 'C:\\University\\4th Year\\ICT Capstone\\Peppar-Robot\\html\\pages\\navigate.html'
+    window.location.href = 'navigate.html'
 });
 
 feedback.addEventListener("click", function () {
     console.log("clicked feedback");
-    window.location.href = 'C:\\University\\4th Year\\ICT Capstone\\Peppar-Robot\\html\\pages\\feedback.html'
+    window.location.href = 'feedback.html'
 });
 
 ourteam.addEventListener("click", function () {
     console.log("clicked ourteam");
-    window.location.href = '/html/pages/services.html'
+    window.location.href = 'ourteam.html'
 });
 
 aboutus.addEventListener("click", function () {
     console.log("clicked aboutus");
-    window.location.href = '/C:\\University\\4th Year\\ICT Capstone\\Peppar-Robot\\html\\pages\\aboutus.html'
+    window.location.href = 'aboutus.html'
 });
