@@ -30,9 +30,15 @@
         <File name="navigate" src="html/pages/navigate.html" />
         <File name="services" src="html/pages/services.html" />
         <File name="index" src="html/index.html" />
+        <File name="launch" src=".vscode/launch.json" />
+        <File name="settings" src=".vscode/settings.json" />
+        <File name="aboutus" src="html/css/aboutus.css" />
+        <File name="dashboard" src="html/js/dashboard.js" />
+        <File name="menu" src="html/js/menu.js" />
+        <File name="aboutus" src="html/pages/aboutus.html" />
     </Resources>
     <Topics>
-        <Topic name="chat_enu" src="chat/chat_enu.top" topicName="" language="" />
+        <Topic name="chat_enu" src="chat/chat_enu.top" topicName="chat" language="en_US" />
     </Topics>
     <IgnoredPaths />
     <Translations auto-fill="en_US">
