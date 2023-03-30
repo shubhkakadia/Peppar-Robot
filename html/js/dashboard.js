@@ -1,8 +1,6 @@
-session = null
-QiSession(connected, disconnected, location.host)
-
 document.addEventListener('click', function () {
     console.log("Clicked");
+<<<<<<< HEAD
 <<<<<<< HEAD
     window.location.href = 'pages/menu.html'
 });
@@ -26,3 +24,7 @@ function launchDashboard(){
 }
 
 >>>>>>> 5958bc61434a4a3543a5b99597eb5f73c0d711a8
+=======
+    window.location.href = '/html/pages/menu.html'
+});
+>>>>>>> parent of 5958bc6 (worked on tablet)
