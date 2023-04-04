@@ -18,13 +18,35 @@
       <div class="items">
         <div class="heading">Service Feedback</div>
       </div>
-      <div>
+      <div class="backButton">
         <button onclick="window.location.href='menu.html'">Go Back</button>
       </div>
       <div class="items">
         <div class="form-floating mb-3 name">
           <input class="form-control" id="floatingInput" placeholder="name" />
           <label for="floatingInput">Input your name (Optional)</label>
+        </div>
+      </div>
+      <div class="items">
+        <div class="form-floating mb-3 name">
+          <select class="form-select" id="serviceSelect" name="serviceSelect" required>
+            <option value="" selected disabled>Select Service</option>
+            <option value="1">Dietetics</option>
+            <option value="2">Exercise Physiology</option>
+            <option value="3">General Practitioners</option>
+            <option value="4">High Performance</option>
+            <option value="5">Legal Advice Clinic</option>
+            <option value="6">Mammography</option>           
+            <option value="7">Marketing Clinic</option>
+            <option value="8">Midwifery</option>
+            <option value="9">Occupational Therapy</option>
+            <option value="10">Physiotherapy</option>
+            <option value="11">Podiatry</option>
+            <option value="12">Psychology Clinic</option>
+            <option value="13">Speech Pathology</option>
+            <option value="14">Tax Clinic</option>
+          </select>
+          <label for="serviceSelect">Select Service (Required)</label>
         </div>
       </div>
       <div class="items">
@@ -35,14 +57,13 @@
       </div>
       <div class="items">
         <div class="image-row">
-          <img src="../assets/1star.png" />
-          <img src="../assets/2star.png" />
-          <img src="../assets/3star.png" />
-          <img src="../assets/4star.png" />
-          <img src="../assets/5star.png" />
+          <img src="../assets/1star.png" onclick="setValue(1)"/>
+          <img src="../assets/2star.png" onclick="setValue(2)"/>
+          <img src="../assets/3star.png" onclick="setValue(3)"/>
+          <img src="../assets/4star.png" onclick="setValue(4)"/>
+          <img src="../assets/5star.png" onclick="setValue(5)"/>
         </div>
       </div>
-
     </div>
   </body>
 </html>
