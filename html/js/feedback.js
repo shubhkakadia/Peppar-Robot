@@ -9,7 +9,22 @@ function setValue(value) {
   console.log(JSON.stringify(data));
   console.log(`Selected value: ${selectedValue}`);
 
-  alert("Thank you for your feedback!");
+  const customAlert = document.createElement('div');
+  customAlert.classList.add('custom-alert');
+  customAlert.innerHTML = `
+  <div class="alert alert-success d-flex align-items-center" role="alert">
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+    <div>
+      Thank you for your feedback!
+    </div>
+  </div>
+  `;
+  document.body.appendChild(customAlert);
+  // Set custom alert position to top of page
+  customAlert.style.position = 'fixed';
+  customAlert.style.top = '0';
+  customAlert.style.left = '40%';
+  customAlert.style.opacity = '80%';
 
   // After 5 seconds, redirect to menu.html
   setTimeout(() => {
