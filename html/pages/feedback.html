@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-    <meta name="viewport" content="width=1280, user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../css/feedback.css" />
     <link
@@ -17,31 +16,19 @@
   </head>
   <body>
     <div>
-      <div class="logo center">
-        <img
-          src="../assets/serviceslogo.jpg"
-          alt=""
-          width="320"
-          height="130"
-        />
-      </div>
-      <div>
-        <button id="backbtn" onclick="window.location.href='menu.html'">Go Back</button>
-      </div>
       <div class="items">
         <div class="heading">Service Feedback</div>
       </div>
-
+      <div class="backButton">
+        <button onclick="window.location.href='menu.html'">Go Back</button>
+      </div>
       <div class="items">
-        <div class="mb-3 name">
-          <input class="form-control" placeholder="Name (Optional)" />
+        <div class="form-floating mb-3 name">
+          <input class="form-control" id="floatingInput" placeholder="name" />
+          <label for="floatingInput">Input your name (Optional)</label>
         </div>
       </div>
       <div class="items">
-<<<<<<< Updated upstream
-        <div class="mb-3 name">
-            <textarea class="form-control" placeholder="Leave a comment here (Optional)"></textarea>
-=======
         <div class="form-floating mb-3 name">
           <select class="form-select" id="services" name="services" required>
             <option value="" selected disabled>Select Service</option>
@@ -67,19 +54,17 @@
         <div class="form-floating name">
             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
             <label for="floatingTextarea">Comments (Optional)</label>
->>>>>>> Stashed changes
           </div>
       </div>
       <div class="items">
         <div class="image-row">
-          <img src="../assets/1star.png" height="195" width="195"/>
-          <img src="../assets/2star.png" height="195" width="195"/>
-          <img src="../assets/3star.png" height="195" width="195"/>
-          <img src="../assets/4star.png" height="195" width="195"/>
-          <img src="../assets/5star.png" height="195" width="210"/>
+          <img src="../assets/1star.png" onclick="setValue(1)"/>
+          <img src="../assets/2star.png" onclick="setValue(2)"/>
+          <img src="../assets/3star.png" onclick="setValue(3)"/>
+          <img src="../assets/4star.png" onclick="setValue(4)"/>
+          <img src="../assets/5star.png" onclick="setValue(5)"/>
         </div>
       </div>
-
     </div>
   </body>
 </html>
