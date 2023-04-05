@@ -4,8 +4,6 @@ const feedback = document.getElementById("feedback");
 const ourteam = document.getElementById("ourteam");
 const aboutus = document.getElementById("aboutus");
 
-console.log(services);
-
 services.addEventListener("click", function () {
     console.log("clicked services");
     window.location.href = 'services.html'

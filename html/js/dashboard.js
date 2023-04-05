@@ -1,7 +1,9 @@
-session = null
-QiSession(connected, disconnected, location.host)
+// session = null
+// QiSession(connected, disconnected, location.host)
 
-document.addEventListener('click', function () {
+const dashboard = document.getElementById("dashboard");
+
+dashboard.addEventListener('click', function () {
     console.log("Clicked");
     location.href = 'pages/menu.html'
 });
