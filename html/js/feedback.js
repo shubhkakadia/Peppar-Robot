@@ -6,14 +6,13 @@ function setValue(value) {
   const comment = document.getElementById('floatingTextarea').value;
   selectedValue = value;
   const data = { name, services, comment, rating: selectedValue };
+  console.log(JSON.stringify(data));
+  console.log(`Selected value: ${selectedValue}`);
 
-  window.location.href = "thankyou.html";
+  alert("Thank you for your feedback!");
 
   // After 5 seconds, redirect to menu.html
   setTimeout(() => {
-    window.location.href = 'menu.html';
-  }, 5000);
-
-  console.log(JSON.stringify(data));
-  console.log(`Selected value: ${selectedValue}`);
+    window.location.href ="menu.html";
+  },3000);
 }
