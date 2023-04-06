@@ -93,7 +93,7 @@ async function setValue(value) {
     customAlert.style.left = "34.5%";
     customAlert.style.opacity = "80%";
 
-    // After 5 seconds, redirect to menu.html
+    // After 3 seconds, redirect to menu.html
     // setTimeout(() => {
     //   window.location.href ="menu.html";
     // },3000);
