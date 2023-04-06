@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta name="viewport" content="width=1280, user-scalable=no" />
     <title>Document</title>
     <link rel="stylesheet" href="../css/feedback.css" />
     <link
@@ -14,12 +15,13 @@
     />
     <script src="../js/feedback.js"></script>
 
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
       <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
-        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+        />
       </symbol>
     </svg>
-
   </head>
   <body>
     <div>
@@ -27,24 +29,27 @@
         <div class="heading">Service Feedback</div>
       </div>
       <div>
-        <button id="backbtn" onclick="window.location.href='menu.html'">Go Back</button>
+        <button id="backbtn" onclick="window.location.href='menu.html'">
+          Go Back
+        </button>
       </div>
       <div class="items">
-        <div class="form-floating mb-3 name">
-          <input class="form-control" id="floatingInput" placeholder="name" />
-          <label for="floatingInput">Input your name (Optional)</label>
+        <div class="mb-3 name">
+          <label>Input your name (Optional)</label>
+          <input id="Name" class="form-control" placeholder="name" />
         </div>
       </div>
       <div class="items">
-        <div class="form-floating mb-3 name">
-          <select class="form-select" id="services" name="services" required>
+        <div class="mb-3 name">
+          <label for="services">Select Service (Required)</label>
+          <select class="form-select" id="ServiceType" name="services" required>
             <option value="" selected disabled>Select Service</option>
             <option value="Dietetics">Dietetics</option>
             <option value="Exercise Physiology">Exercise Physiology</option>
             <option value="General Practitioners">General Practitioners</option>
             <option value="High Performace">High Performance</option>
             <option value="Legal Advice Clinic">Legal Advice Clinic</option>
-            <option value="Mammography">Mammography</option>           
+            <option value="Mammography">Mammography</option>
             <option value="Marketing Clinic">Marketing Clinic</option>
             <option value="Midwifery">Midwifery</option>
             <option value="Occupational Therapy">Occupational Therapy</option>
@@ -54,22 +59,25 @@
             <option value="Speech Pathology">Speech Pathology</option>
             <option value="Tax Clinic">Tax Clinic</option>
           </select>
-          <label for="services">Select Service (Required)</label>
         </div>
       </div>
       <div class="items">
-        <div class="form-floating name">
-            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">Comments (Optional)</label>
-          </div>
+        <div class="name">
+          <label>Comments (Optional)</label>
+          <textarea
+            class="form-control"
+            placeholder="Leave a comment here"
+            id="Comment"
+          ></textarea>
+        </div>
       </div>
       <div class="items">
         <div class="image-row">
-          <img src="../assets/1star.png" onclick="setValue(1)"/>
-          <img src="../assets/2star.png" onclick="setValue(2)"/>
-          <img src="../assets/3star.png" onclick="setValue(3)"/>
-          <img src="../assets/4star.png" onclick="setValue(4)"/>
-          <img src="../assets/5star.png" onclick="setValue(5)"/>
+          <img src="../assets/1star.png" onclick="setValue(1)" />
+          <img src="../assets/2star.png" onclick="setValue(2)" />
+          <img src="../assets/3star.png" onclick="setValue(3)" />
+          <img src="../assets/4star.png" onclick="setValue(4)" />
+          <img src="../assets/5star.png" onclick="setValue(5)" />
         </div>
       </div>
     </div>

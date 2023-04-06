@@ -15,7 +15,7 @@
         #self.onStopped() #activate the output of the box
         # ALDialog = ALProxy('ALDialog')
         if self.ALDialog:
-            self.ALDialog.setASRConfidenceThreshold(0.2)
+            self.ALDialog.setASRConfidenceThreshold(0.4)
         self.onStopped()
 
     def onInput_onStop(self):
