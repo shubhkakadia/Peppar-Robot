@@ -1543,6 +1543,10 @@
         <File name="package" src="PepperBackend/package.json" />
         <File name="feedback" src="PepperBackend/routes/feedback.js" />
         <File name="server" src="PepperBackend/server.js" />
+        <File name="" src="PepperBackend/.gitignore" />
+        <File name="ff4ceca68eb5c3dbbd456b073d68e312-8035340ca40a03f067b301792b373529284db2a2" src="PepperBackend/ff4ceca68eb5c3dbbd456b073d68e312-8035340ca40a03f067b301792b373529284db2a2.zip" />
+        <File name="jquery-3.4.1.min" src="html/js/jquery-3.4.1.min.js" />
+        <File name="jquery-1.11.0.min" src="html/js/jquery-1.11.0.min.js" />
     </Resources>
     <Topics>
         <Topic name="chat_enu" src="chat/chat_enu.top" topicName="chat" language="en_US" />
