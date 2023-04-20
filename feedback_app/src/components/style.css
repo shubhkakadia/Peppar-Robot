@@ -1,45 +1,115 @@
 
-.flexBetween{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* FeedbackPage CSS */
+.flexBetween {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.tableContent{
-    background-color: white;
-    margin-top: 5%;
-    border-radius: 15px;
-    padding: 0.5%;
-    height: 80vh;
-    width: 75vw;
+.tableContent {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: 0.5%;
+  border-radius: 15px;
+  padding: 0.5%;
+  height: 91vh;
+  width: 75vw;
 }
 
-.bgImg{
-    height: 100vh;
-    width: 100vw;
-    background-image: url("../assets/pexels-scott-webb-305821.jpg");
-    background-size: cover;
+.bgImg {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../assets/pexels-scott-webb-305821.jpg");
+  background-size: cover;
 }
 
-.feedbackpopup{
-    padding: 1%;
-    border-radius: 20px;
-    position: absolute;
-    left: 30%;
-    top: 25%;
-    width: 40vw;
-    height: 50vh;
-    background-color: blanchedalmond;
+/* Table CSS */
+.feedbackpopup {
+  background-image: url('../assets/pexels-scott-webb-403575.jpg');
+  background-size: cover;
+  padding: 1%;
+  border-radius: 20px;
+  position: absolute;
+  left: 30%;
+  top: 25%;
+  width: 40vw;
+  height: 50vh;
+  /* background-color: blanchedalmond; */
 }
 
-.blurred{
-    filter: blur(3px);
+.blurred {
+  filter: blur(3px);
 }
 
-.focused{
-    filter: none !important;
+.focused {
+  filter: none !important;
 }
 
-.space{
-    margin: 5%;
+.space {
+  margin: 5%;
+  padding-left: 5%;
+}
+
+.pagination {
+  padding-bottom: 1%;
+}
+
+.spaceAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.downloadbutton{
+  font-size: 2vw;
+  cursor: pointer;
+  position: absolute;
+  top: 90%;
+  left: 80%;
+}
+
+/* Dashboard CSS */
+.counterBlock{
+  background-color: rgba(255, 255, 255, 0.5 );
+  width: 25vw;
+  height: 10vh;
+  border-radius: 10px;
+  margin-top: 2%;
+  margin-left: 3%;
+}
+
+.ratingBlock{
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 25vw;
+  height: 65vh;
+  border-radius: 10px;
+  margin-top: 2%;
+  margin-left: 3%;
+  padding: 1%;
+}
+
+.dropdown {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #333;
+}
+
+.dropdown option {
+  background-color: #E8E7E3;
+  color: #333;
+}
+
+.usageBlock{
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  height: 40vh;
+  width: 60vw;
+  padding: 1%;
+  top: 12%;
+  left: 30%;
 }

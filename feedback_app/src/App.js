@@ -25,8 +25,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
 
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
-
-          <Route path="/:id" element={<FeedbackPage/>} />
+          <Route path="/feedbacks" element={<FeedbackPage/>}/>
         </Routes>
       </BrowserRouter>
     </div>

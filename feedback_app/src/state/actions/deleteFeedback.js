@@ -1,11 +1,11 @@
 import axios from "axios";
 import { FEEDBACKS } from "../types";
 
-export const readFeedbacks = () => (dispatch) => {
+export const deleteFeedback = (feedback) => (dispatch) => {
   dispatch(load());
   var config = {
-    method: "get",
-    url: "http://192.168.4.25:3000/feedback/get",
+    method: "delete",
+    url: `http://192.168.4.25:3000/feedback/delete/${feedback.ID}`,
     headers: {},
   };
 
