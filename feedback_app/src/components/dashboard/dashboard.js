@@ -7,6 +7,7 @@ import { Tooltip, Title, ArcElement, Legend, Chart, Colors } from "chart.js";
 import { readFeedbacks } from "../../state/actions/readFeedbacks";
 import { selectFeedback } from "../../state/actions/selectFeedback";
 import "chart.js/auto";
+import Loader from "../loader";
 
 export default function Dashboard() {
   Chart.register(Colors, Tooltip, Title, ArcElement, Legend);
@@ -18,9 +19,11 @@ export default function Dashboard() {
   const [selectedService, setSelectedService] = useState("All");
   const [ratngLabel, setRatinglabel] = useState([]);
   const feedbackData = useSelector((state) => state.FeedbackData.data);
+  const isLoading = useSelector((state) => state.FeedbackData.load);
   const month = date.getMonth();
   const year = date.getFullYear();
   const daysInMonth = [];
+  let allServices = [];
   const labels = [
     "January",
     "February",
@@ -36,10 +39,12 @@ export default function Dashboard() {
     "December",
   ];
 
-  const allServices = [
-    "All",
-    ...new Set(feedbackData?.map((feedback) => feedback.ServiceType)),
-  ];
+  if (feedbackData) {
+    allServices = [
+      "All",
+      ...new Set(feedbackData?.map((feedback) => feedback.ServiceType)),
+    ];
+  }
 
   const DoughnutOptions = {
     plugins: {
@@ -146,51 +151,58 @@ export default function Dashboard() {
   }
 
   function handleUsageLine() {
-    console.log(Array(Math.ceil(new Date(year, month + 1, 0).getDate())))
+    console.log(Array(Math.ceil(new Date(year, month + 1, 0).getDate())));
     // daysInMonth.push(Array(Math.ceil(new Date(year, month + 1, 0).getDate())))
-    console.log(daysInMonth)
-    feedbackData?.forEach((item) => {
-      console.log(
-        item.ID,
-        new Date(item.createdAt).getDate(),
-        new Date(item.createdAt).getMonth() + 1,
-        new Date(item.createdAt).getFullYear()
-      );
-    });
+    console.log(daysInMonth);
+    if (feedbackData){
+      feedbackData?.forEach((item) => {
+        console.log(
+          item.ID,
+          new Date(item.createdAt).getDate(),
+          new Date(item.createdAt).getMonth() + 1,
+          new Date(item.createdAt).getFullYear()
+        );
+      });
+    }
+
   }
 
   return (
     <div className="bgImg">
       <Navbar />
-      <div className="counterBlock flexBetween">
-        <div className="fs-3">Total Feedbacks: {empCounter}</div>
-      </div>
-      <div className="ratingBlock">
-        <h5 className="title flexBetween">Ratings Distribution</h5>
 
-        <div className="flexBetween">
-          <select
-            className="dropdown"
-            onChange={(event) => {
-              setSelectedService(event.target.value);
-            }}
-          >
-            {allServices?.map((item) => {
-              return (
-                <option key={item} value={item}>
-                  {item}
-                </option>
-              );
-            })}
-          </select>
+      <>
+        <div className="counterBlock flexBetween">
+          <div className="fs-3">Total Feedbacks: {empCounter}</div>
+        </div>
+        <div className="ratingBlock">
+          <h5 className="title flexBetween">Ratings Distribution</h5>
+
+          <div className="flexBetween">
+            <select
+              className="dropdown"
+              onChange={(event) => {
+                setSelectedService(event.target.value);
+              }}
+            >
+              {allServices?.map((item) => {
+                return (
+                  <option key={item} value={item}>
+                    {item}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+
+          <Doughnut data={DoughnutData} options={DoughnutOptions} />
         </div>
 
-        <Doughnut data={DoughnutData} options={DoughnutOptions} />
-      </div>
-
-      <div className="usageBlock">
-        <Line data={LineData} options={LineOptions} />
-      </div>
+        <div className="usageBlock">
+          <Line data={LineData} options={LineOptions} />
+        </div>
+        <div className="load">{isLoading ? <Loader /> : <></>}</div>
+      </>
     </div>
   );
 }

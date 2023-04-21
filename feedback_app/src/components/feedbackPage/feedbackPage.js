@@ -21,7 +21,7 @@ export default function FeedbackPage() {
   }, []);
 
   function handleCloseViewFeedback() {
-    if (toggleCounter === true && selected_feedback !== undefined) {
+    if (toggleCounter === true && selected_feedback!== undefined) {
       dispatch(selectFeedback());
       setToggleCounter(false);
     } else {

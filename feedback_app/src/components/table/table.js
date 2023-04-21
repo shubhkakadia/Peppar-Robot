@@ -3,7 +3,7 @@ import "../style.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectFeedback } from "../../state/actions/selectFeedback";
 import { deleteFeedback } from "../../state/actions/deleteFeedback";
-import FileSaver from "file-saver";
+import Loader from "../loader";
 
 export default function Table(props) {
   const dispatch = useDispatch();
@@ -12,6 +12,7 @@ export default function Table(props) {
   const [feedbackData, setFeedbackData] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  const isLoading = useSelector((state) => state.FeedbackData.load);
   const selected_feedback = useSelector(
     (state) => state.selectedFeedback.selected
   );
@@ -49,15 +50,17 @@ export default function Table(props) {
 
   const handleSearch = () => {
     let arr = [];
-    props.props?.forEach((item) => {
-      if (
-        item.Name?.toLowerCase().includes(searchText) ||
-        item.ID?.toString().includes(searchText) ||
-        item.ServiceType.toLowerCase().includes(searchText)
-      ) {
-        arr.push(item);
-      }
-    });
+    if (props.props) {
+      props.props?.forEach((item) => {
+        if (
+          item.Name?.toLowerCase().includes(searchText) ||
+          item.ID?.toString().includes(searchText) ||
+          item.ServiceType.toLowerCase().includes(searchText)
+        ) {
+          arr.push(item);
+        }
+      });
+    }
     setFeedbackData(arr);
   };
 
@@ -109,7 +112,9 @@ export default function Table(props) {
         </div>
       </div>
       <div className={`shadow-lg ${viewFeedbackToggle ? "blurred" : ""}`}>
-        {feedbackData.length > 0 ? (
+        {!feedbackData ? (
+          <Loader />
+        ) : feedbackData.length > 0 ? (
           <>
             <table className="table table-stiped table-hover">
               <thead>
@@ -257,6 +262,9 @@ export default function Table(props) {
       ) : (
         <div id="popup"></div>
       )}
+      <div>
+        <div className="load">{isLoading ? <Loader /> : <></>}</div>
+      </div>
     </div>
   );
 }
