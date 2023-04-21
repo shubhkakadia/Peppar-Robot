@@ -222,7 +222,7 @@ export default function Table(props) {
             ></i>
           </>
         ) : (
-          <div>No Data found on the search!!!</div>
+          <div>No Data found!!!</div>
         )}
       </div>
       {viewFeedbackToggle ? (
@@ -262,9 +262,13 @@ export default function Table(props) {
       ) : (
         <div id="popup"></div>
       )}
-      <div>
-        <div className="load">{isLoading ? <Loader /> : <></>}</div>
-      </div>
+      {isLoading ? (
+        <div className="load">
+          <Loader />
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 }

@@ -102,13 +102,17 @@
   color: #333;
 }
 
+.lineGraph{
+  height: 70%;
+}
+
 .usageBlock {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  height: 40vh;
+  height: 55vh;
   width: 60vw;
-  padding: 1%;
+  padding: 1.5%;
   top: 12%;
   left: 30%;
 }
