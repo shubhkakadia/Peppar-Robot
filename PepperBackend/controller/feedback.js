@@ -56,7 +56,31 @@ const read = (req, res) => {
     });
 };
 
+const deleteFeedback = (req, res) => {
+  feedback
+    .findOneAndRemove({ ID: req.params.id })
+    .then((data) => {
+      feedback.find().then((remainingData) => {
+        console.log("Delete Feedback (Success)");
+        const response = {
+          status: "Success",
+          response: remainingData,
+        };
+        res.send(response);
+      });
+    })
+    .catch((err) => {
+      const response = {
+        status: "Error",
+        response: err,
+      };
+
+      res.send(response);
+    });
+};
+
 module.exports = {
   register,
   read,
+  deleteFeedback,
 };
