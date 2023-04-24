@@ -9,9 +9,9 @@ import Navbar from "../navbar/navbar";
 export default function FeedbackPage() {
   const dispatch = useDispatch();
   const [toggleCounter, setToggleCounter] = useState(false);
-  const feedbackData = useSelector((state) => state.FeedbackData.data);
+  const feedbackData = useSelector((state) => state.FeedbackData?.data);
   const selected_feedback = useSelector(
-    (state) => state.selectedFeedback.selected
+    (state) => state.selectedFeedback?.selected
   );
 
   useEffect(() => {

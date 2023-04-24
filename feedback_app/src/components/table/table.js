@@ -12,9 +12,9 @@ export default function Table(props) {
   const [feedbackData, setFeedbackData] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const isLoading = useSelector((state) => state.FeedbackData.load);
+  const isLoading = useSelector((state) => state.FeedbackData?.load);
   const selected_feedback = useSelector(
-    (state) => state.selectedFeedback.selected
+    (state) => state.selectedFeedback?.selected
   );
   const [recordsPerPage] = useState(10);
   const indexOfLastRecord = currentPage * recordsPerPage;
