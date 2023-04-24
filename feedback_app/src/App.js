@@ -1,9 +1,14 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useSelector } from 'react-redux';
 import "./App.css";
 import Dashboard from "./components/dashboard/dashboard";
 import FeedbackPage from "./components/feedbackPage/feedbackPage";
+import LoginPage from './components/login/LoginPage';
 
 function App() {
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+
+  console.log(isLoggedIn);
   return (
     <div className="App">
       <meta
@@ -22,7 +27,10 @@ function App() {
       ></link>
       <BrowserRouter>
         <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/LoginPage" element={<LoginPage />} />
+          <Route path="/dashboard" element={isLoggedIn ? <Dashboard /> : <LoginPage />} />
+          <Route path="/" element={isLoggedIn ? <Dashboard /> : <LoginPage />} />
+          {/* <Route path="/dashboard" element={<Dashboard />} /> */}
 
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="/feedbacks" element={<FeedbackPage/>}/>

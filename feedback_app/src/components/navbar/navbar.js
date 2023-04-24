@@ -1,7 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { logout } from '../../actions/authActions';
 
 export default function Navbar() {
+  const dispatch = useDispatch();
+  const handleLogout = () => {
+    dispatch(logout());
+  };
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -34,6 +40,7 @@ export default function Navbar() {
                 </Link>
               </li>
             </ul>
+            <button onClick={handleLogout}>Logout</button>
           </div>
         </div>
       </nav>
