@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { logout } from '../../actions/authActions';
-
+import './navbar.css'
 export default function Navbar() {
   const dispatch = useDispatch();
   const handleLogout = () => {
@@ -40,7 +40,7 @@ export default function Navbar() {
                 </Link>
               </li>
             </ul>
-            <button onClick={handleLogout}>Logout</button>
+            <button className="logout-button" onClick={handleLogout}>Logout</button>
           </div>
         </div>
       </nav>
