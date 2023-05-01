@@ -16,14 +16,26 @@
   <behaviorContent path="behavior_1">
    <userRequestable/>
    <nature>interactive</nature>
+   <loadingResponses>
+    <sentence lang="en_US">Don't be shy! Come say hi!</sentence>
+    <sentence lang="en_US">Hellooo</sentence>
+   </loadingResponses>
+   <autonomous>
+    <condition purpose="launchTrigger"><![CDATA[('Launchpad/NumPeopleZone2' > 0)~ 5
+&&
+('Launchpad/PreviousActivity'!= "unisahealth-f9c4a4/behavior_1"]]></condition>
+   </autonomous>
    <permissions/>
   </behaviorContent>
+  <dialogContent topicName="ExampleDialog" typeVersion="1.0">
+   <topic language="en_US" path="behavior_1/ExampleDialog/ExampleDialog_enu.top"/>
+  </dialogContent>
   <dialogContent topicName="chat" typeVersion="1.0">
-   <topic path="chat/chat_enu.top" language="en_US"/>
+   <topic language="en_US" path="chat/chat_enu.top"/>
   </dialogContent>
  </contents>
  <requirements>
-  <naoqiRequirement minVersion="2.5" maxVersion="2.5"/>
+  <naoqiRequirement maxVersion="2.5" minVersion="2.5"/>
   <robotRequirement model="JULIETTE_Y20"/>
  </requirements>
 </package>
