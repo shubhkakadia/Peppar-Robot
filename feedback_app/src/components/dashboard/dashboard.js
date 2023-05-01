@@ -22,8 +22,8 @@ export default function Dashboard() {
   const [selectedService, setSelectedService] = useState("All");
   const [chartDate, setChartDate] = useState(new Date());
   const [ratngLabel, setRatinglabel] = useState([]);
-  const feedbackData = useSelector((state) => state.FeedbackData?.data);
-  const isLoading = useSelector((state) => state.FeedbackData?.load);
+  const feedbackData = useSelector((state) => state.FeedbackData.data);
+  const isLoading = useSelector((state) => state.FeedbackData.load);
   const month = chartDate.getMonth();
   const year = chartDate.getFullYear();
   let allServices = [];
@@ -107,11 +107,11 @@ export default function Dashboard() {
   }, [feedbackData, selectedService]);
 
   useEffect(() => {
-    if (empCounter !== feedbackData?.length) {
+    if (empCounter !== feedbackData.length) {
       setTimeout(() => {
         setEmpCounter(empCounter + 1);
       }, counterSpeed);
-      if (empCounter === Math.round((feedbackData?.length / 100) * 80)) {
+      if (empCounter === Math.round((feedbackData.length / 100) * 80)) {
         setCounterSpeed(500);
       }
     }
@@ -288,7 +288,6 @@ export default function Dashboard() {
       setViewingtype("Monthly");
     }
   };
-
 
   return (
     <div className="bgImg">
