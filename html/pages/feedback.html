@@ -26,7 +26,6 @@
         />
       </symbol>
     </svg>
-    
   </head>
   <body>
     <div>
@@ -87,8 +86,12 @@
       </div>
     </div>
 
-    <script src="https://webdemo.aldebaran.com/libs/2.5.5/pepperjs/pepperjs-1.0.0.min.js"></script>
-    <script>
+    <!-- <script src="https://webdemo.aldebaran.com/libs/2.5.5/pepperjs/pepperjs-1.0.0.min.js"></script> -->
+    <!-- <script src="/libs/qimessaging/2/qimessaging.js"></script> -->
+    <script src="../js/robotutils.js"></script>
+    <script src="../js/feedback.js"></script>
+
+    <!-- <script>
       // session = null;
       // QiSession(connected, disconnected, location.host);
 
@@ -126,6 +129,32 @@
       }
       FetchAPI();
       function setValue(ratingvalue) {
+        const QiSession = require("naoqi").QiSession;
+        const session = new QiSession("192.168.0.160");
+
+        console.log("session", session);
+        // specify what services will be used later
+        session.using("ALTextToSpeech", "tts");
+        session.using("ALBehaviorManager");
+
+        // start programming on this trigger
+        session.onload = function (loaded) {
+          assert.deepEqual(this, session);
+          this.tts.say("hello naoqi");
+          this.behaviorManager.run("behavir path").then(() => {
+            // get result from run
+          });
+
+          // register an event
+          this.subscribe("robotIsWakeUp", (awake) => {
+            console.log("when robot is wake up");
+          });
+        };
+
+        // switch(ratingvalue){
+        //   case 1:
+        // }
+
         var Name = document.getElementById("Name").value;
         var ServiceType = document.getElementById("ServiceType").value;
         var Comments = document.getElementById("Comment").value;
@@ -195,10 +224,10 @@
           }, 3000);
         }
       }
-    </script>
+    </> -->
 
-    <!-- <script src="/libs/qi/2/qi.js"></script> -->
-    <!-- <script src="../js/jquery-1.11.0.min.js"></script> -->
+    <!-- <script src="/libs/qi/2/qi.js"></> -->
+    <!-- <script src="../js/jquery-1.11.0.min.js"></> -->
     <!-- <script src="../js/feedback.js" type="text/javascript"></script> -->
   </body>
 </html>
