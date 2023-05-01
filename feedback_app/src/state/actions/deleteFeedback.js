@@ -5,7 +5,7 @@ export const deleteFeedback = (feedback) => (dispatch) => {
   dispatch(load());
   var config = {
     method: "delete",
-    url: `http://192.168.4.25:3000/feedback/delete/${feedback.ID}`,
+    url: `http://192.168.0.115:3000/feedback/delete/${feedback.ID}`,
     headers: {},
   };
 

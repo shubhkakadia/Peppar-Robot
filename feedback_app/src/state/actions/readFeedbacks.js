@@ -5,7 +5,7 @@ export const readFeedbacks = () => (dispatch) => {
   dispatch(load());
   var config = {
     method: "get",
-    url: "http://192.168.4.25:3000/feedback/get",
+    url: "http://192.168.0.115:3000/feedback/get",
     headers: {},
   };
 
