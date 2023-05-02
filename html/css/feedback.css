@@ -11,10 +11,10 @@
   justify-content: center;
   align-items: center;
   padding-top: 2%;
+
 }
 
 .image-row {
-  width: 80vw;
   justify-content: space-between;
 }
 

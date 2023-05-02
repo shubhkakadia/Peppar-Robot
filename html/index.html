@@ -6,6 +6,7 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <meta name="viewport" content="width=1280, user-scalable=no"/>
     <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/dashboard.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -14,26 +15,42 @@
       crossorigin="anonymous"
     />
   </head>
+  <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    </style>
   <body>
     <div id="dashboard">
       <div class="logo center">
-        <img src="./assets/serviceslogo.jpg" alt="" width="320" height="130" />
+        <img src="./assets/.jp" alt="" width="320" height="130" />
       </div>
+      
       <div class="center">
         <div>
-          <div style="font-size: 3.5vw; margin-top: 15%">
-            Welcome to UniSA Medical Health Clinic.
-          </div>
+          <!-- <div style="font-size: 3.5vw; margin-top: 1%">
+            <h1>Welcome to UniSA Medical Health Clinic.</h1>
+          </div> -->
+          <header class="w3-container w3-padding-32 w3-center " id="home">
+            <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Pepper.</h1>
+            <h5>Don't be shy come and say Hi!</h5>
+            <img src="./assets/Screenshot 2023-04-11 232538.png" alt="boy" class="w3-image" width="630" height="1108">
+          </header>
         </div>
       </div>
-      <div class="center">
+      <!-- <div class="center">
         <div>
-          <div style="font-size: 2vw; margin-top: 30%">
-            How may I help you today?
+          <div style="font-size: 5vw; margin-top: 10%">
+            Don't Be Shy! Come and say Hi!
           </div>
-          <!-- <button onclick="window.location.href='pages/menu.html'">Go to Menu</button> -->
+          
         </div>
-      </div>
+      </div> -->
     </div>
 
     <script src="/libs/qi/2/qi.js"></script>
