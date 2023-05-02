@@ -96,6 +96,7 @@ function setValue(ratingvalue) {
     RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
       ALLeds.randomEyes(2.0);
       ALTextToSpeech.say("hello got the message");
+      
     });
     setTimeout(function () {
       window.location.href = "menu.html";
