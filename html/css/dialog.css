@@ -32,10 +32,101 @@
     justify-content: first baseline;
     margin-top: 5px;
    }
-.bubble {
-    --r: 25px; /* the radius */
-    --t: 30px; /* the size of the tail */
-    
+
+   div.bubble {
+    background: #0C2D48;
+
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    color: black;
+    box-shadow: 2px 2px 8px #ddd;
+    padding: 5px 10px;
+    margin-left: 20px;
+    margin-right: 200px;
+    line-height: 130%;
+    font-size: 20px;
+    color: white;
+  }
+
+  .title{
+    font-size: 50px;
+    color: black;
+  }
+
+  .text{
+    font-size: 20px;
+    color: grey;
+  }
+
+   div.bubble.left-top:before, div.bubble.top:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-left: 1px solid #aaa;
+    border-left-color: inherit;
+    border-top: 1px solid #aaa;
+    border-top-color: inherit;
+    background-color: inherit;
+  }
+  div.bubble.left-top:before {
+    margin: 1px 0 0 -15px;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+   .speech-bubble {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 2%;
+    width: 600px;
+  }
+
+  .speech-bubble:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid khaki;
+  border-bottom: 10px solid khaki;
+  border-right: 10px solid #ffffff;
+  ;
+  left: -10px;
+
+  bottom:50px;
+}
+
+.speech-bubble-arrow {
+  position: absolute;
+  width: var(--arrow-size, 10px);
+  height: var(--arrow-size, 10px);
+  left: calc(-1 * var(--arrow-size));
+  top: calc(50% - var(--arrow-size) / 2);
+  transform: rotate(45deg);
+  background-color: #ffffff;
+}
+
+.speech-bubble-arrow:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-45deg);
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+
+
+  
+/* .bubble { */
+    /* --r: 25px; the radius */
+    /* --t: 30px; the size of the tail */
+/*     
     max-width: 500px;
     padding: calc(2*var(--r)/3);
     -webkit-mask: 
@@ -60,7 +151,7 @@
     margin-left: var(--t);
     place-self: end;
   }
-  
+   */
 
 
   h1 {

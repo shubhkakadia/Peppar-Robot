@@ -26,12 +26,14 @@
     @media only screen and (max-width: 600px) {#main {margin-left: 0}}
     </style>
   <body>
-    <div id="dashboard">
+    <div>
       <div class="logo center">
         <img src="./assets/.jp" alt="" width="320" height="130" />
+        <div>
+          <button class="logout-button" onclick="logout()">Logout</button>
+        </div>
       </div>
-      
-      <div class="center">
+      <div id="dashboard" class="center">
         <div>
           <!-- <div style="font-size: 3.5vw; margin-top: 1%">
             <h1>Welcome to UniSA Medical Health Clinic.</h1>

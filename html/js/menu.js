@@ -9,6 +9,7 @@ RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
   ALTextToSpeech.say("Welcome to the menu.");
 });
 
+
 services.addEventListener("click", function () {
   console.log("clicked services");
   window.location.href = "services.html";
