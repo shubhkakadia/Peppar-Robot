@@ -85,6 +85,46 @@
         <File name="dialog" src="html/pages/dialog.html" />
         <File name="userPic" src="html/assets/userPic.png" />
         <File name="dialog" src="html/css/dialog.css" />
+        <File name="" src="feedback_app/.gitignore" />
+        <File name="README" src="feedback_app/README.md" />
+        <File name="package-lock" src="feedback_app/package-lock.json" />
+        <File name="package" src="feedback_app/package.json" />
+        <File name="favicon" src="feedback_app/public/favicon.ico" />
+        <File name="index" src="feedback_app/public/index.html" />
+        <File name="logo192" src="feedback_app/public/logo192.png" />
+        <File name="logo512" src="feedback_app/public/logo512.png" />
+        <File name="manifest" src="feedback_app/public/manifest.json" />
+        <File name="robots" src="feedback_app/public/robots.txt" />
+        <File name="App" src="feedback_app/src/App.css" />
+        <File name="App" src="feedback_app/src/App.js" />
+        <File name="App.test" src="feedback_app/src/App.test.js" />
+        <File name="ProtectedRoutes" src="feedback_app/src/ProtectedRoutes.js" />
+        <File name="pexels-scott-webb-305821" src="feedback_app/src/assets/pexels-scott-webb-305821.jpg" />
+        <File name="pexels-scott-webb-403575" src="feedback_app/src/assets/pexels-scott-webb-403575.jpg" />
+        <File name="dashboard" src="feedback_app/src/components/dashboard/dashboard.js" />
+        <File name="feedbackPage" src="feedback_app/src/components/feedbackPage/feedbackPage.js" />
+        <File name="loader" src="feedback_app/src/components/loader.js" />
+        <File name="LoginPage" src="feedback_app/src/components/login/LoginPage.css" />
+        <File name="LoginPage" src="feedback_app/src/components/login/LoginPage.js" />
+        <File name="navbar" src="feedback_app/src/components/navbar/navbar.css" />
+        <File name="navbar" src="feedback_app/src/components/navbar/navbar.js" />
+        <File name="style" src="feedback_app/src/components/style.css" />
+        <File name="table" src="feedback_app/src/components/table/table.js" />
+        <File name="authSlice" src="feedback_app/src/features/auth/authSlice.js" />
+        <File name="index" src="feedback_app/src/index.css" />
+        <File name="index" src="feedback_app/src/index.js" />
+        <File name="logo" src="feedback_app/src/logo.svg" />
+        <File name="reportWebVitals" src="feedback_app/src/reportWebVitals.js" />
+        <File name="setupTests" src="feedback_app/src/setupTests.js" />
+        <File name="authActions" src="feedback_app/src/state/actions/authActions.js" />
+        <File name="deleteFeedback" src="feedback_app/src/state/actions/deleteFeedback.js" />
+        <File name="readFeedbacks" src="feedback_app/src/state/actions/readFeedbacks.js" />
+        <File name="selectFeedback" src="feedback_app/src/state/actions/selectFeedback.js" />
+        <File name="authReducers" src="feedback_app/src/state/reducers/authReducers.js" />
+        <File name="index" src="feedback_app/src/state/reducers/index.js" />
+        <File name="readFeedbacks" src="feedback_app/src/state/reducers/readFeedbacks.js" />
+        <File name="selectFeedback" src="feedback_app/src/state/reducers/selectFeedback.js" />
+        <File name="index" src="feedback_app/src/state/types/index.js" />
     </Resources>
     <Topics>
         <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />

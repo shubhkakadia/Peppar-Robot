@@ -6,6 +6,7 @@ const aboutus = document.getElementById("aboutus");
 const help = document.getElementById("help");
 
 
+
 services.addEventListener("click", function () {
     console.log("clicked services");
     window.location.href = 'services.html'
