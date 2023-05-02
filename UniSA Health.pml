@@ -79,10 +79,16 @@
         <File name="dr-zori1" src="html/assets/ourteam/dr-zori1.jpg" />
         <File name="gunawardana" src="html/assets/ourteam/gunawardana.jpg" />
         <File name="ong" src="html/assets/ourteam/ong.jpg" />
+        <File name="robotutils" src="html/js/robotutils.js" />
+        <File name="pepperHeadIcon" src="html/assets/pepperHeadIcon.png" />
+        <File name="pepperLookDown" src="html/assets/pepperLookDown.png" />
+        <File name="dialog" src="html/pages/dialog.html" />
+        <File name="userPic" src="html/assets/userPic.png" />
+        <File name="dialog" src="html/css/dialog.css" />
     </Resources>
     <Topics>
         <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
-        <Topic name="chat_enu" src="chat/chat_enu.top" topicName="" language="" />
+        <Topic name="chat_enu" src="chat/chat_enu.top" topicName="chat" language="en_US" />
     </Topics>
     <IgnoredPaths />
     <Translations auto-fill="en_US">

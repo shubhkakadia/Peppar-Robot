@@ -3,6 +3,8 @@ const navigate = document.getElementById("navigate");
 const feedback = document.getElementById("feedback");
 const ourteam = document.getElementById("ourteam");
 const aboutus = document.getElementById("aboutus");
+const help = document.getElementById("help");
+
 
 services.addEventListener("click", function () {
     console.log("clicked services");
@@ -27,4 +29,9 @@ ourteam.addEventListener("click", function () {
 aboutus.addEventListener("click", function () {
     console.log("clicked aboutus");
     window.location.href = 'aboutus.html'
+});
+
+help.addEventListener("click", function () {
+    console.log("clicked help");
+    window.location.href = 'dialog.html'
 });
