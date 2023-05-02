@@ -1,8 +1,10 @@
 const utilityFunction = function (callback) {
   console.log(RobotUtils);
   RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
-    ALLeds.randomEyes(2.0);
+    ALSpeechRecognition.pause(true);
+
     ALTextToSpeech.say("I will take over the world");
+    ALSpeechRecognition.pause(false);
   });
 };
 
@@ -33,45 +35,60 @@ function setValue(ratingvalue) {
     case 1:
       RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
         ALLeds.randomEyes(2.0);
+        ALSpeechRecognition.pause(true);
+
         ALTextToSpeech.say(
           "We're sorry to hear that you had a poor experience with us. We take all feedback seriously and would appreciate the opportunity to address your concerns."
         );
+        ALSpeechRecognition.pause(false);
       });
       break;
 
     case 2:
       RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
         ALLeds.randomEyes(2.0);
+        ALSpeechRecognition.pause(true);
+
         ALTextToSpeech.say(
           "Thank you for your feedback. We are sorry that your experience was not up to our usual standards. We will take your comments on board to improve our services."
         );
+        ALSpeechRecognition.pause(false);
       });
       break;
 
     case 3:
       RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
         ALLeds.randomEyes(2.0);
+        ALSpeechRecognition.pause(true);
+
         ALTextToSpeech.say(
           "Thanks for taking the time to share your feedback. We are happy to hear that you had an average experience with us. We will strive to make it a five-star experience next time."
         );
+        ALSpeechRecognition.pause(false);
       });
       break;
 
     case 4:
       RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
         ALLeds.randomEyes(2.0);
+        ALSpeechRecognition.pause(true);
+
         ALTextToSpeech.say(
           "Thank you for your positive review. We're glad you had a great experience with us and appreciate your support. We'll keep working hard to provide exceptional service."
         );
+        ALSpeechRecognition.pause(false);
       });
       break;
 
     case 5:
       RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
         ALLeds.randomEyes(2.0);
+        ALSpeechRecognition.pause(true);
+
         ALTextToSpeech.say(
           "Wow, thank you so much for the amazing review! We are thrilled to hear that you had an exceptional experience with us and appreciate your kind words. We look forward to serving you again soon."
         );
+        ALSpeechRecognition.pause(false);
       });
       break;
   }

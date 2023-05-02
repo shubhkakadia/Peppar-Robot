@@ -18,9 +18,12 @@
     <script src="../js/robotutils.js"></script>
     <script>
       RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
+        ALSpeechRecognition.pause(true);
+
         ALTextToSpeech.say(
           "Here is the map layout of the clinic. maybe you can find what you need."
         );
+        ALSpeechRecognition.pause(false);
       });
     </script>
     <div>

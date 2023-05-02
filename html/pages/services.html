@@ -19,9 +19,12 @@
     <script src="../js/robotutils.js"></script>
     <script>
       RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
+        ALSpeechRecognition.pause(true);
+
         ALTextToSpeech.say(
           "Here are the list of services Elizabeth clinic has to offer."
         );
+        ALSpeechRecognition.pause(false);
       });
     </script>
 

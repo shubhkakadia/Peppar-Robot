@@ -13,20 +13,17 @@ RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
 services.addEventListener("click", function () {
   console.log("clicked services");
   window.location.href = "services.html";
-  RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
+  RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
+    ALSpeechRecognition.pause(true);
     ALTextToSpeech.say(
       "Here are the list of services Elizabeth clinic has to offer."
     );
+    ALSpeechRecognition.pause(false);
   });
 });
 
 navigate.addEventListener("click", function () {
   console.log("clicked navigate");
-  RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
-    ALTextToSpeech.say(
-      "Here is the map layout of the clinic. maybe you can find what you need."
-    );
-  });
   window.location.href = "navigate.html";
 });
 
