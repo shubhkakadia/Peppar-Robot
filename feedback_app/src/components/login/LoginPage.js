@@ -25,6 +25,7 @@ const LoginPage = () => {
     if(loggedInUser){
       navigate("/dashboard");
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[loggedInUser])
 
   const validate = () => {

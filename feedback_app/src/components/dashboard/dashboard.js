@@ -22,6 +22,7 @@ export default function Dashboard() {
   const [selectedService, setSelectedService] = useState("All");
   const [chartDate, setChartDate] = useState(new Date());
   const [ratngLabel, setRatinglabel] = useState([]);
+  const [happinessPercentage, setHappinessPercentage] = useState(0);
   const feedbackData = useSelector((state) => state.FeedbackData.data);
   const isLoading = useSelector((state) => state.FeedbackData.load);
   const month = chartDate.getMonth();
@@ -127,8 +128,15 @@ export default function Dashboard() {
     dispatch(readFeedbacks());
     dispatch(selectFeedback());
     handleUsageLine();
+    handleHappinessPercentage();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  function handleHappinessPercentage(){
+    const ratingsArr = feedbackData.map(element => element.Rating);
+    const sum = ratingsArr.reduce((total, item) => total + item, 0);
+    setHappinessPercentage(parseInt((sum / ratingsArr.length)*20));
+  }
 
   function handleRatingDognut() {
     if (feedbackData) {
@@ -369,6 +377,7 @@ export default function Dashboard() {
             <Line data={LineData} options={LineOptions} />
           </div>
         </div>
+        <div className="happinessPercentage fs-4">Overall happiness: {happinessPercentage}%</div>
         {isLoading ? (
           <div className="load">
             <Loader />

@@ -6,7 +6,11 @@ const utilityFunction = function (callback) {
   });
 };
 
-utilityFunction();
+RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
+  ALTextToSpeech.say("Tell us more about your experience.");
+});
+
+// utilityFunction();
 
 var fetchData = null;
 var currentDate = new Date();
@@ -25,13 +29,57 @@ function FetchAPI() {
 }
 FetchAPI();
 function setValue(ratingvalue) {
-  // switch(ratingvalue){
-  //   case 1:
-  // }
+  switch (ratingvalue) {
+    case 1:
+      RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
+        ALLeds.randomEyes(2.0);
+        ALTextToSpeech.say(
+          "We're sorry to hear that you had a poor experience with us. We take all feedback seriously and would appreciate the opportunity to address your concerns."
+        );
+      });
+      break;
+
+    case 2:
+      RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
+        ALLeds.randomEyes(2.0);
+        ALTextToSpeech.say(
+          "Thank you for your feedback. We are sorry that your experience was not up to our usual standards. We will take your comments on board to improve our services."
+        );
+      });
+      break;
+
+    case 3:
+      RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
+        ALLeds.randomEyes(2.0);
+        ALTextToSpeech.say(
+          "Thanks for taking the time to share your feedback. We are happy to hear that you had an average experience with us. We will strive to make it a five-star experience next time."
+        );
+      });
+      break;
+
+    case 4:
+      RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
+        ALLeds.randomEyes(2.0);
+        ALTextToSpeech.say(
+          "Thank you for your positive review. We're glad you had a great experience with us and appreciate your support. We'll keep working hard to provide exceptional service."
+        );
+      });
+      break;
+
+    case 5:
+      RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
+        ALLeds.randomEyes(2.0);
+        ALTextToSpeech.say(
+          "Wow, thank you so much for the amazing review! We are thrilled to hear that you had an exceptional experience with us and appreciate your kind words. We look forward to serving you again soon."
+        );
+      });
+      break;
+  }
 
   var Name = document.getElementById("Name").value;
   var ServiceType = document.getElementById("ServiceType").value;
   var Comments = document.getElementById("Comment").value;
+
   if (ServiceType !== "") {
     function generateID() {
       console.log(fetchData);
@@ -43,6 +91,7 @@ function setValue(ratingvalue) {
         return fetchData[fetchData.length - 1].ID + 1;
       }
     }
+
     function generateJSON() {
       var ID = generateID();
       var Conversation = [];
@@ -57,6 +106,7 @@ function setValue(ratingvalue) {
       console.log("feedbackData", feedbackData);
       return feedbackData;
     }
+
     function post_req() {
       var xhr = new XMLHttpRequest();
       var url = "http://192.168.0.115:3000/feedback/register";
@@ -88,16 +138,6 @@ function setValue(ratingvalue) {
     customAlert.style.left = "34.5%";
     customAlert.style.opacity = "80%";
 
-    // +var tts = new ALProxy("ALTextToSpeech", "192.168.0.160", 9559); // replace "your-pepper-robot-ip-address" with the IP address of your Pepper robot
-
-    // session.say("Thank you for your feedback");
-
-    // sayThankYou();
-    RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
-      ALLeds.randomEyes(2.0);
-      ALTextToSpeech.say("hello got the message");
-      
-    });
     setTimeout(function () {
       window.location.href = "menu.html";
     }, 3000);
