@@ -27,10 +27,10 @@
    </autonomous>
    <permissions/>
   </behaviorContent>
-  <dialogContent typeVersion="1.0" topicName="ExampleDialog">
+  <dialogContent topicName="ExampleDialog" typeVersion="1.0">
    <topic path="behavior_1/ExampleDialog/ExampleDialog_enu.top" language="en_US"/>
   </dialogContent>
-  <dialogContent typeVersion="1.0" topicName="chat">
+  <dialogContent topicName="chat" typeVersion="1.0">
    <topic path="chat/chat_enu.top" language="en_US"/>
   </dialogContent>
  </contents>

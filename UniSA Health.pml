@@ -51,8 +51,6 @@
         <File name="server" src="PepperBackend/server.js" />
         <File name="" src="PepperBackend/.gitignore" />
         <File name="ff4ceca68eb5c3dbbd456b073d68e312-8035340ca40a03f067b301792b373529284db2a2" src="PepperBackend/ff4ceca68eb5c3dbbd456b073d68e312-8035340ca40a03f067b301792b373529284db2a2.zip" />
-        <File name="jquery-3.4.1.min" src="html/js/jquery-3.4.1.min.js" />
-        <File name="jquery-1.11.0.min" src="html/js/jquery-1.11.0.min.js" />
         <File name="140605-humanoid-jms-1257" src="html/assets/140605-humanoid-jms-1257.jpg" />
         <File name="Screenshot 2023-04-11 232538" src="html/assets/Screenshot 2023-04-11 232538.png" />
         <File name="GeneralPrac" src="html/assets/services/GeneralPrac.png" />

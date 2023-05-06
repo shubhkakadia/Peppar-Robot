@@ -5,21 +5,18 @@ const ourteam = document.getElementById("ourteam");
 const aboutus = document.getElementById("aboutus");
 const help = document.getElementById("help");
 
-RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
-  ALTextToSpeech.say("Welcome to the menu.");
+RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
+  ALSpeechRecognition.pause(true);
+  ALTextToSpeech.say(
+    "Welcome to the menu."
+  );
+  ALSpeechRecognition.pause(false);
 });
 
 
 services.addEventListener("click", function () {
   console.log("clicked services");
   window.location.href = "services.html";
-  RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
-    ALSpeechRecognition.pause(true);
-    ALTextToSpeech.say(
-      "Here are the list of services Elizabeth clinic has to offer."
-    );
-    ALSpeechRecognition.pause(false);
-  });
 });
 
 navigate.addEventListener("click", function () {

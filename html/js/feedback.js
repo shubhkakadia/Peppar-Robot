@@ -1,6 +1,6 @@
 const utilityFunction = function (callback) {
   console.log(RobotUtils);
-  RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
+  RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
     ALSpeechRecognition.pause(true);
 
     ALTextToSpeech.say("I will take over the world");
@@ -33,7 +33,7 @@ FetchAPI();
 function setValue(ratingvalue) {
   switch (ratingvalue) {
     case 1:
-      RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
+      RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
         ALLeds.randomEyes(2.0);
         ALSpeechRecognition.pause(true);
 
@@ -45,7 +45,7 @@ function setValue(ratingvalue) {
       break;
 
     case 2:
-      RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
+      RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
         ALLeds.randomEyes(2.0);
         ALSpeechRecognition.pause(true);
 
@@ -57,7 +57,7 @@ function setValue(ratingvalue) {
       break;
 
     case 3:
-      RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
+      RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
         ALLeds.randomEyes(2.0);
         ALSpeechRecognition.pause(true);
 
@@ -69,7 +69,7 @@ function setValue(ratingvalue) {
       break;
 
     case 4:
-      RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
+      RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
         ALLeds.randomEyes(2.0);
         ALSpeechRecognition.pause(true);
 
@@ -81,7 +81,7 @@ function setValue(ratingvalue) {
       break;
 
     case 5:
-      RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
+      RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
         ALLeds.randomEyes(2.0);
         ALSpeechRecognition.pause(true);
 
