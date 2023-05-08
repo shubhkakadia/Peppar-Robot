@@ -8,12 +8,6 @@ dashboard.addEventListener('click', function () {
     location.href = 'pages/menu.html'
 });
 
-const utilityFunction = function (callback) {
-    console.log(RobotUtils);
-  };
-
-  utilityFunction();
-
 function logout() {
 	// Get the admin username and password from the user
 	var username = prompt("Enter admin username:");
@@ -23,14 +17,19 @@ function logout() {
 	if (username === "admin" && password === "admin") {
 		// Clear any user session data or cookies
 		// Redirect the user to the logout page or homepage
-        RobotUtils.onServices(function (ALSystem) {
-            ALSystem.powerOff();
+        RobotUtils.onServices(function (ALMemory, ALTabletService) {
+            ALMemory.raiseEvent("ClosedAllApps", "");
+            console.log(ALMemory);
+            ALTabletService.logout();
+            console.log(ALTabletService);
           });
+
 	} else {
 		alert("Incorrect admin username or password!");
 	};
    
 };
+
 // function connected(s) {
 //     console.log("Session Connected");
 //     session = s;
