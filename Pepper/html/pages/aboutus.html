@@ -35,7 +35,11 @@ type="text/css"
   <script src="../js/robotutils.js"></script>
   <script>
       RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
+        ALSpeechRecognition.pause(true);
+
     ALTextToSpeech.say("This is where you can learn more about us.");
+    ALSpeechRecognition.pause(false);
+
   });
   </script>
 
