@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=1280, user-scalable=no" />
+    <title>Services</title>
+    <link rel="stylesheet" href="../css/services.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <script src="../js/robotutils.js"></script>
+    <script>
+      RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
+        ALSpeechRecognition.pause(true);
+
+        ALTextToSpeech.say(
+          "Here are the list of services Elizabeth clinic has to offer."
+        );
+        ALSpeechRecognition.pause(false);
+      });
+    </script>
+
+    <div>
+      <div>
+        <div class="logo center">
+          <img src="../assets/" alt="" width="320" height="130" />
+        </div>
+        <div class="center">
+          <div>
+            <div style="font-size: 3.5vw; margin-top: 15%; margin-bottom: 15%">
+              Sample Services
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <button id="backbtn" onclick="window.location.href='menu.html'">
+            Go Back
+          </button>
+        </div>
+
+        <div class="container">
+          <div>
+            <img
+              src="../assets/pepperLookDown.png"
+              style="width: 30%; height: 30%; float: right"
+            />
+          </div>
+          <div class="bubble left">
+            Here are the services we have available! There's quite a few! So
+            feel free to scroll down to explore more!
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                src="../assets/services/dietetics-banner.webp"
+                alt="Card image cap"
+              />
+              <h5 class="card-title">Diabetics</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                src="../assets/services/exphys-banner.webp"
+                alt="Exercise Physiology"
+              />
+              <h5 class="card-title">Exercise Physiology</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                src="../assets/services/GeneralPrac.png"
+                style="width: 85%; height: 75%"
+                alt="GeneralPrac"
+              />
+              <h5 class="card-title">General Practitioners</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                src="../assets/services/highperformance-banner.webp"
+                alt="highperformance"
+              />
+              <h5 class="card-title">High Performance</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                src="../assets/services/law-banner.webp"
+                alt="law"
+              />
+              <h5 class="card-title">Legal Advice Clinic</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                src="../assets/services/mammography-banner.webp"
+                alt="mammography"
+              />
+              <h5 class="card-title">Mammography</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                src="../assets/services/marketing-banner.webp"
+                alt="marketing"
+              />
+              <h5 class="card-title">Marketing Clinic</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                src="../assets/services/midwifery-banner.webp"
+                alt="midwifery"
+              />
+              <h5 class="card-title">Midwifery</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                src="../assets/services/ot-banner.webp"
+                alt="ot"
+              />
+              <h5 class="card-title">Occupational Therapy</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                src="../assets/services/physio-banner.webp"
+                alt="physio"
+              />
+              <h5 class="card-title">Physiotherapy</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                src="../assets/services/podiatry-banner.webp"
+                alt="podiatry"
+              />
+              <h5 class="card-title">Podiatry</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                src="../assets/services/psychology-clinic-banner-gradient.webp"
+                style="width: 80%; height: 78%"
+                alt="psychology"
+              />
+              <h5 class="card-title">Psychology Clinic</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="card text-center mb-3" style="width: 18rem">
+          <div class="card-body">
+            <img
+              class="card-img-top"
+              src="../assets/services/speechpath-banner.webp"
+              alt="speechpath"
+            />
+            <h5 class="card-title">Speech Pathology</h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+
+        <div class="card text-center mb-3" style="width: 18rem">
+          <div class="card-body">
+            <img
+              class="card-img-top"
+              src="../assets/services/tax-banner.webp"
+              alt="tax"
+            />
+            <h5 class="card-title">Tax Clinic</h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+
+        <div class="card text-center mb-3" style="width: 18rem; border: none">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+        <div class="card text-center mb-3" style="width: 18rem; border: none">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

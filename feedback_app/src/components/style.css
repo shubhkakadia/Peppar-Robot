@@ -117,6 +117,17 @@
   left: 30%;
 }
 
+.happinessPercentage {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  height: 12vh;
+  width: 20vw;
+  padding: 1.5%;
+  top: 70%;
+  left: 30%;
+}
+
 /* Loader CSS */
 .load {
   position: absolute;
