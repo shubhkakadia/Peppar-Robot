@@ -17,12 +17,14 @@ concept:(goodbye) [bye goodbye "bye bye" "tata" "see you" adios cheerio "so long
 concept:(name) ["what's your name?" "who are you?" "what are you?"]
 concept:(help) ["help me" help]
 concept:(repeat) [repeat understand huh "what's that"]
+concept:(test) ["test"]
 #concept:(killswitch) ["who is the master"]
 
 # Catching inputs and triggering outputs
 #u:(e:onStart) $onStopped=1
 
 # Replying to speech
+u:([~test e:displayTest]) $testing=1 Start testing
 u:([~hello e:displayMenu]) $onMenu=1 ^start(animations/Stand/Gestures/Hey_1) Hello, I'm Pepper, and I'm here to help you! Feel free to touch the buttons on my screen or even say it out-loud! Try speaking loud so I can hear you!^wait(animations/Stand/Gestures/Hey_1) ^gotoReactivate(help)
 u:([~hi e:displayMenu])$onMenu=1 Hello to you too, how can I help you today? would you like to know more about our services?.. or maybe have a look at the map?
 u:(~howdy) ~hello   ^gotoReactivate(help)
@@ -39,7 +41,6 @@ u:(~name) I'm Pepper.. and I am here to .. assist.. and interact with lovely peo
 u:([~help e:displayHelp]) $onHelp=1 Here are some of the words I understand! If you find what you're looking for, then say it out loud! ^gotoReactivate(help)
 
 
-u:(e:displayAboutus)$onAboutus=1 About us
 
 
 proposal:%howToUseThisPage 
