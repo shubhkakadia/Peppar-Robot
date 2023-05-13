@@ -761,4 +761,92 @@ class MyClass(GeneratedClass):
         tts.say("I'm at origin!")
 
         navigation_service.stopLocalization()
-        print("done")]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" /><Output name="Rating1" type="1" type_size="1" nature="2" inner="0" tooltip="" id="5" /></Box><Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="3" indexofinput="2" outputowner="0" indexofoutput="4" /><Link inputowner="5" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="0" indexofinput="12" outputowner="5" indexofoutput="4" /><Link inputowner="5" indexofinput="2" outputowner="3" indexofoutput="4" /><Link inputowner="0" indexofinput="12" outputowner="2" indexofoutput="4" /><Link inputowner="0" indexofinput="12" outputowner="7" indexofoutput="4" /><Link inputowner="0" indexofinput="12" outputowner="8" indexofoutput="4" /><Link inputowner="0" indexofinput="12" outputowner="9" indexofoutput="4" /><Link inputowner="0" indexofinput="12" outputowner="10" indexofoutput="4" /><Link inputowner="0" indexofinput="12" outputowner="11" indexofoutput="4" /><Link inputowner="0" indexofinput="12" outputowner="12" indexofoutput="4" /><Link inputowner="13" indexofinput="2" outputowner="14" indexofoutput="3" /><Link inputowner="5" indexofinput="2" outputowner="15" indexofoutput="13" /><Link inputowner="2" indexofinput="2" outputowner="15" indexofoutput="14" /><Link inputowner="7" indexofinput="2" outputowner="15" indexofoutput="15" /><Link inputowner="8" indexofinput="2" outputowner="15" indexofoutput="16" /><Link inputowner="9" indexofinput="2" outputowner="15" indexofoutput="17" /><Link inputowner="10" indexofinput="2" outputowner="15" indexofoutput="18" /><Link inputowner="11" indexofinput="2" outputowner="15" indexofoutput="19" /><Link inputowner="5" indexofinput="2" outputowner="15" indexofoutput="20" /><Link inputowner="15" indexofinput="2" outputowner="1" indexofoutput="4" /><Link inputowner="15" indexofinput="2" outputowner="13" indexofoutput="4" /><Link inputowner="14" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="6" indexofinput="2" outputowner="15" indexofoutput="21" /><Link inputowner="0" indexofinput="12" outputowner="6" indexofoutput="4" /><Link inputowner="16" indexofinput="2" outputowner="15" indexofoutput="22" /></Diagram></BehaviorKeyframe></BehaviorLayer></Timeline></Box></ChoregrapheProject>
+        print("done")]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" /><Output name="Rating1" type="1" type_size="1" nature="2" inner="0" tooltip="" id="5" /></Box><Box name="exploreMap" id="17" localization="8" tooltip="This box contains a basic python script and can be used to create any python script box you would like.&#x0A;&#x0A;To edit its script, double-click on it." x="407" y="756"><bitmap>media/images/box/box-python-script.png</bitmap><script language="4"><content><![CDATA[import qi
+import sys
+import numpy
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+
+    def onLoad(self):
+        #put initialization code here
+        pass
+
+    def onUnload(self):
+        #put clean-up code here
+        pass
+
+    def onInput_onStart(self):
+        if __name__ == "__main__":
+                session = qi.Session()
+                try:
+                    session.connect("tcp://192.168.0.160:9559")
+                except RuntimeError:
+                    print("Can't connect to Naoqi")
+                    sys.exit(1)
+                self.main(session)
+
+
+
+
+    def onInput_onStop(self):
+        #self.asr_service.pause(True)
+        #self.asr_service.unsubscribe("my_box")
+        self.onUnload() #it is recommended to reuse the clean-up as the box is stopped
+        self.onStopped() #activate the output of the box
+
+    def main(self, session):
+        # Get the services ALNavigation and ALMotion.
+        navigation_service = session.service("ALNavigation")
+        tts = session.service("ALTextToSpeech")
+
+         # Explore the environment, in a radius of 2 m.
+#        radius = 5.0
+#        error_code = navigation_service.explore(radius)
+#        if error_code != 0:
+#            print "Exploration failed."
+#            return
+#        # Saves the exploration on disk
+#        map_path = navigation_service.saveExploration()
+#        print "Exploration saved at path: \"" + map_path + "\""
+
+        navigation_service.stopLocalization()
+
+        # Load the saved map
+        map_path = "/home/nao/.local/share/Explorer/2023-05-09T032509.353Z.explo"
+
+
+        navigation_service.loadExploration(map_path)
+
+        metrical_map = navigation_service.getMetricalMap()
+
+        #print("aaaaaaaaaaaa")
+        print(metrical_map)
+
+        navigation_service.startLocalization()
+        print("Pepper's location")
+        pepperPosition = navigation_service.getRobotPositionInMap()
+        print(pepperPosition)
+        origin = pepperPosition
+        pointA = [1.0,1.0,0.0]
+        pointB = [2.0,1.0,1.0]
+        navigation_service.navigateToInMap(pointA)
+        print("went to point A")
+        tts.say("I'm at A!")
+        print(pepperPosition)
+
+        tts.say("I'm going to B!")
+        navigation_service.navigateToInMap(pointB)
+        print("went to point B")
+        tts.say("I'm at B!")
+
+
+        tts.say("I'm going to origin!")
+        navigation_service.navigateToInMap(origin)
+        print("went to point origin")
+        tts.say("I'm at origin!")
+
+        navigation_service.stopLocalization()
+        print("done")]]></content></script><Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" /><Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" /><Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" /><Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" /></Box><Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="3" indexofinput="2" outputowner="0" indexofoutput="4" /><Link inputowner="5" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="0" indexofinput="12" outputowner="5" indexofoutput="4" /><Link inputowner="5" indexofinput="2" outputowner="3" indexofoutput="4" /><Link inputowner="0" indexofinput="12" outputowner="2" indexofoutput="4" /><Link inputowner="0" indexofinput="12" outputowner="7" indexofoutput="4" /><Link inputowner="0" indexofinput="12" outputowner="8" indexofoutput="4" /><Link inputowner="0" indexofinput="12" outputowner="9" indexofoutput="4" /><Link inputowner="0" indexofinput="12" outputowner="10" indexofoutput="4" /><Link inputowner="0" indexofinput="12" outputowner="11" indexofoutput="4" /><Link inputowner="0" indexofinput="12" outputowner="12" indexofoutput="4" /><Link inputowner="13" indexofinput="2" outputowner="14" indexofoutput="3" /><Link inputowner="5" indexofinput="2" outputowner="15" indexofoutput="13" /><Link inputowner="2" indexofinput="2" outputowner="15" indexofoutput="14" /><Link inputowner="7" indexofinput="2" outputowner="15" indexofoutput="15" /><Link inputowner="8" indexofinput="2" outputowner="15" indexofoutput="16" /><Link inputowner="9" indexofinput="2" outputowner="15" indexofoutput="17" /><Link inputowner="10" indexofinput="2" outputowner="15" indexofoutput="18" /><Link inputowner="11" indexofinput="2" outputowner="15" indexofoutput="19" /><Link inputowner="5" indexofinput="2" outputowner="15" indexofoutput="20" /><Link inputowner="15" indexofinput="2" outputowner="1" indexofoutput="4" /><Link inputowner="15" indexofinput="2" outputowner="13" indexofoutput="4" /><Link inputowner="14" indexofinput="2" outputowner="0" indexofoutput="2" /><Link inputowner="6" indexofinput="2" outputowner="15" indexofoutput="21" /><Link inputowner="0" indexofinput="12" outputowner="6" indexofoutput="4" /><Link inputowner="16" indexofinput="2" outputowner="15" indexofoutput="22" /></Diagram></BehaviorKeyframe></BehaviorLayer></Timeline></Box></ChoregrapheProject>
