@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Exercise Physiology</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/services.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <img src="../assets/header.png" height="240px" width="auto">
+    </div>
+
+
+    <div>
+        <button id="backbtn" onclick="window.location.href='menu.html'">
+            Go Back
+        </button>
+    </div>
+
+    <div class="container" style="margin-bottom: 5%;">
+        <div>
+            <div style="font-size: 3.5vw; margin-top: 6%; margin-bottom: 2% ;margin-left:1%">
+                Occupational Therapy
+            </div>
+            <div class="container">
+                <strong p>Working together to build the skills for living a fulfilling life.</p></strong>
+            </div>
+            <div class="container">
+                <p>Based at UniSA’s City West Health and Medical Clinic, the Occupational Therapy (OT) Service offers
+                    assessment and treatment for children, youth, and adults. Services are delivered year-round by fully
+                    accredited and experienced OTs, or students under the supervision of experienced OTs. </p>
+            </div>
+            <div class="container">
+                <p>We deliver services that are flexible and family-centred, which may be funded through the National
+                    Disability Insurance Scheme (NDIS), with rebates also available via Medicare with a health plan
+                    referral, and Private Health Cover.</p>
+            </div>
+            <div class="container">
+                <p>Appointments are essential. Referrals are not required.</p>
+            </div>
+            <br>
+
+
+
+
+            <button class="collapsible">Services</button>
+            <div class="content">
+                <div style="margin-left: 2%;">
+                    <p>N/A</p>
+
+                </div>
+            </div>
+            <button class="collapsible">Fees</button>
+            <div class="content" style="background-color: white;">
+                <p>N/A</p>
+            </div>
+            <button class="collapsible">FAQs</button>
+            <div class="content">
+                <p>N/A</p>
+            </div>
+            <button class="collapsible">Teaching and Learning</button>
+            <div class="content">
+                <p>N/A</p>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+
+
+    <!-- <strong p> Working with you to tailor exercise plans to suit your needs. </p></strong>
+    <p>Based at UniSA’s City East, City West, and Magill campuses, the Exercise Physiology Clinic offers
+        specialist exercise prescription services to the community to assist with the management and
+        prevention of chronic health conditions, musculoskeletal rehabilitation, medical conditions,
+        disabilities and mental health conditions.</p>
+    <p>Exercise physiology services are provided by final year undergraduate exercise physiology students
+        under the supervision of accredited exercise physiologists, or directly by accredited exercise
+        physiologists.</p>
+    <p>Appointments are essential (please note in most cases for Accredited Exercise Physiology services, a
+        referral from your General Practitioner or medical specialist is required).</p> -->
+
+
+
+</body>
+
+</html>
