@@ -70,12 +70,35 @@
         <File name="dialog" src="html/pages/dialog.html" />
         <File name="userPic" src="html/assets/userPic.png" />
         <File name="dialog" src="html/css/dialog.css" />
+        <File name="header" src="html/assets/header.png" />
+        <File name="services" src="html/js/services.js" />
+        <File name="officialLogo" src="html/assets/officialLogo.png" />
     </Resources>
     <Topics>
         <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
         <Topic name="chat_enu" src="chat/chat_enu.top" topicName="chat" language="en_US" />
     </Topics>
-    <IgnoredPaths />
+    <IgnoredPaths>
+        <Path src="html/pages/second" />
+        <Path src="html/pages/first/podiatry.html" />
+        <Path src="html/pages/first" />
+        <Path src="html/pages/second/dietetics.html" />
+        <Path src="html/pages/second/physiotherapy.html" />
+        <Path src="html/pages/second/header.png" />
+        <Path src="html/pages/second/speechPathology.html" />
+        <Path src="html/pages/first/physiotherapy.html" />
+        <Path src="html/pages/first/speechPathology.html" />
+        <Path src="html/pages/second/podiatry.html" />
+        <Path src="html/pages/first/header.png" />
+        <Path src="html/pages/childrensHealth.html" />
+        <Path src="html/pages/first/occupationalTherapy.html" />
+        <Path src="html/pages/second/occupationalTherapy.html" />
+        <Path src="html/pages/second/allServices.css" />
+        <Path src="html/pages/NDIS.html" />
+        <Path src="html/pages/first/allServices.css" />
+        <Path src="html/pages/first/exercisePhysiology.html" />
+        <Path src="html/pages/second/exercisePhysiology.html" />
+    </IgnoredPaths>
     <Translations auto-fill="en_US">
         <Translation name="translation_en_US" src="translations/translation_en_US.ts" language="en_US" />
     </Translations>
