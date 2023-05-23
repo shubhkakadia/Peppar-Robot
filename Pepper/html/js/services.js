@@ -19,7 +19,7 @@ exercisePhysiology.addEventListener("click", function () {
 
 occupationalTherapy.addEventListener("click", function () {
   console.log("clicked occupationalTherapy");
-  window.location.href = "navigate.html";
+  window.location.href = "occupationalTherapy.html";
 });
 
 physiotherapy.addEventListener("click", function () {

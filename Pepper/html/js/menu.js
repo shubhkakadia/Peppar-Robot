@@ -16,6 +16,13 @@ RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
 
 services.addEventListener("click", function () {
   console.log("clicked services");
+  RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
+    ALSpeechRecognition.pause(true);
+    ALTextToSpeech.say(
+      "services"
+    );
+    ALSpeechRecognition.pause(false);
+  })
   window.location.href = "services.html";
 });
 
