@@ -70,6 +70,21 @@
         <File name="dialog" src="html/pages/dialog.html" />
         <File name="userPic" src="html/assets/userPic.png" />
         <File name="dialog" src="html/css/dialog.css" />
+        <File name="allServices" src="html/pages/first/allServices.css" />
+        <File name="exercisePhysiology" src="html/pages/first/exercisePhysiology.html" />
+        <File name="header" src="html/pages/first/header.png" />
+        <File name="occupationalTherapy" src="html/pages/first/occupationalTherapy.html" />
+        <File name="physiotherapy" src="html/pages/first/physiotherapy.html" />
+        <File name="podiatry" src="html/pages/first/podiatry.html" />
+        <File name="speechPathology" src="html/pages/first/speechPathology.html" />
+        <File name="allServices" src="html/pages/second/allServices.css" />
+        <File name="dietetics" src="html/pages/second/dietetics.html" />
+        <File name="exercisePhysiology" src="html/pages/second/exercisePhysiology.html" />
+        <File name="header" src="html/pages/second/header.png" />
+        <File name="occupationalTherapy" src="html/pages/second/occupationalTherapy.html" />
+        <File name="physiotherapy" src="html/pages/second/physiotherapy.html" />
+        <File name="podiatry" src="html/pages/second/podiatry.html" />
+        <File name="speechPathology" src="html/pages/second/speechPathology.html" />
     </Resources>
     <Topics>
         <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
