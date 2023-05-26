@@ -4,24 +4,27 @@ QiSession(connected, disconnected, location.host)
 const dashboard = document.getElementById("dashboard");
 
 
-dashboard.addEventListener('click', function () {
-    console.log("Clicked");
-    location.href = 'pages/menu.html'
-});
-
-
 function connected(s) {
-    console.log("Session connected");
-    session = s;
-    //If you want to subscribe so some events (to send info pepper->tablet) call the function here
+	console.log("Session connected");
+	session = s;
+	//If you want to subscribe so some events (to send info pepper->tablet) call the function here
 }
 
 function disconnected(error) {
-    console.log("Session disconnected");
+	console.log("Session disconnected");
+}
+// Function to trigger the TTS
+function speak() {
+	session.service("ALTextToSpeech").then(function (tts) {
+		// Set the text to be spoken
+		var textToSpeak = "Welcome aaa!";
+		// Call the TTS service and speak the text
+		tts.say(textToSpeak);
+	});
 }
 
 function logout() {
-	
+
 	// Get the admin username and password from the user
 	var password = prompt("Enter admin password:");
 
@@ -42,24 +45,24 @@ function logout() {
 		// 		});
 		// 	});
 		// });
-		
+
 		// RobotUtils.subscribeToALMemoryEvent("clickedExit", true);
 
-		
 
-        // RobotUtils.onServices(function (ALMemory, ALBehaviorManager) {
+
+		// RobotUtils.onServices(function (ALMemory, ALBehaviorManager) {
 		// 	console.log(ALMemory)
 		// 	ALMemory.raiseEvent("clickedExit", true)
 		// 	// ALBehaviorManager.stopAllBehaviors()
 		// 	// console.log(ALBehaviorManager);
 		// 	// ALSystem.exit();
 		// 	// console.log(ALSystem);
-        //   });
+		//   });
 
 	} else {
 		alert("Incorrect admin username or password!");
 	};
-   
+
 };
 
 // function connected(s) {

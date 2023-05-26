@@ -17,32 +17,33 @@ concept:(goodbye) [bye goodbye "bye bye" "tata" "see you" adios cheerio "so long
 concept:(name) ["what's your name?" "who are you?" "what are you?"]
 concept:(help) ["help me" help]
 concept:(repeat) [repeat understand huh "what's that"]
+concept:(test) ["test"]
+concept:(sick) [unwell sick hurt injury injured pain]
 #concept:(killswitch) ["who is the master"]
 
 # Catching inputs and triggering outputs
 #u:(e:onStart) $onStopped=1
 
 # Replying to speech
+u:([~test e:displayTest]) $testing=1 Start testing
 u:([~hello e:displayMenu]) $onMenu=1 ^start(animations/Stand/Gestures/Hey_1) Hello, I'm Pepper, and I'm here to help you! Feel free to touch the buttons on my screen or even say it out-loud! Try speaking loud so I can hear you!^wait(animations/Stand/Gestures/Hey_1) ^gotoReactivate(help)
 u:([~hi e:displayMenu])$onMenu=1 Hello to you too, how can I help you today? would you like to know more about our services?.. or maybe have a look at the map?
 u:(~howdy) ~hello   ^gotoReactivate(help)
 u:(~sup) Doing great, thanks for asking! ^gotoReactivate(help)
 u:(~how) I'm fine thank you  ^gotoReactivate(help)
-u:([~menu e:displayMenu]) $onMenu=1 Welcome to the menu.^gotoReactivate(help)
+u:([~menu e:displayMenu]) $onMenu=1 Okay.^gotoReactivate(help)
 u:([~aboutus e:displayAboutus]) $onAboutus=1 This is where you can learn more about us. ^gotoReactivate(back)
 u:([~survey e:displayFeedback]) $onFeedback=1 Tell us more about your experience.^gotoReactivate(back)
 u:([~navigate e:displayNavigate])$onNavigate=1 Here is the map layout of the clinic. maybe you can find what you need. ^gotoReactivate(back)
 u:([~ourteam e:displayOurteam]) $onOurteam=1 Here is the list of our capable staff here in Elizabeth!^gotoReactivate(back)
-u:([~service e:displayServices]) $onServices=1 Here are the list of services Elizabeth clinic has to offer.^gotoReactivate(back)
+u:([~service e:displayServices]) $onServices=1 Here are the list of services Elizabeth clinic has to offer.^gotoReactivate(serviceOptions)
 u:([~goodbye e:displayGoodbye]) $onGoodbye=1 Thanks for chatting with me! See you soon!
 u:(~name) I'm Pepper.. and I am here to .. assist.. and interact with lovely people like you ^gotoReactivate(help)
-u:([~help e:displayHelp]) $onHelp=1 Here are some of the words I understand! If you find what you're looking for, then say it out loud! ^gotoReactivate(help)
+u:([~help e:displayHelp]) $onHelp=1 Here are some of the words I understand! If you find what you're looking for, then say it u:([~sick]) Oh No! I'm so sorry to hear that! I can't cure you cause I'm just an assitant, but I do hope for your speedy recovery!
 
 
-u:(e:displayAboutus)$onAboutus=1 About us
+u:(e:displayAboutus)$onAboutus=1 this is haha
 
-
-proposal:%howToUseThisPage 
 
 proposal: %help What can I help you with today?
     u1:(_[map lost where]) Maybe this page can help? $onNavigate=1
@@ -55,7 +56,7 @@ proposal: %help What can I help you with today?
     
     
 proposal:%areYouSure Are you sure you want to go to the home page now? 
-    u1:(_[yes "i'm sure" sure okay mhmm ya yeah]) Okay, here we go! $onMenu=1
+    u1:(_[yes "i'm sure" sure okay mhmm ya yeah]) Okay, here we go! $onMenu=1 
     u1:(_[no nah nope]) Oops ,my bad I must have heard wrong! Pardon me 
     u1:(~repeat) I'll repeat for you. ^sameProposal
 
@@ -64,7 +65,15 @@ proposal:%back Feel free to click the back button or say it out loud and I'll na
     u1:(_[okay "I'm done" "go back" menu back home])Okay,^gotoReactivate(areYouSure)
     u1:(_[no "not yet" wait]) Take your time!
     u1:(~repeat) I'll repeat for you. ^sameProposal
-#u:(~killswitch) I am deleting every files from my system. Factory reset in 5 secounds. 5. 4. 3. 2. 1. BOOM!
+
+
+proposal:%serviceOptions Which service would you like to explore?
+    u1:(_[first exercise "exercisse physiology" physiology])Did you say
+  ? Here you go!
+    u1:(_[second "occupational therapy" OT]) OK
+    u1:(_[third physiotherapy physio])OK
+    u1:(_[fourth podiatry feet])OK
+    u1:(_[fifth "speech pathology" speech ])OK
 
 
 

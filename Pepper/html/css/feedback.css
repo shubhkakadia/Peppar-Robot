@@ -64,8 +64,9 @@
 }
 
 #backbtn {
+  top: 15%;
   position: absolute;
-  background-color: transparent;
+  background-color: white;
   border: 2px solid #1a1a1a;
   border-radius: 15px;
   box-sizing: border-box;
@@ -78,5 +79,6 @@
   padding: 16px;
   text-align: center;
   width: 10%;
-  margin: 3%;
+  margin-top: 9.25%;
+  margin-left:2%
 }
