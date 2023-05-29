@@ -5,27 +5,13 @@ const ourteam = document.getElementById("ourteam");
 const aboutus = document.getElementById("aboutus");
 const help = document.getElementById("help");
 
-RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
-  ALSpeechRecognition.pause(true);
-  ALTextToSpeech.say(
-    "Welcome to the menu."
-  );
-  ALSpeechRecognition.pause(false);
-});
-
-
 services.addEventListener("click", function () {
   console.log("clicked services");
-  RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
-    ALSpeechRecognition.pause(true);
-    ALTextToSpeech.say(
-      "services"
-    );
-    ALSpeechRecognition.pause(false);
-  })
-  window.location.href = "services.html";
-});
-
+  var tts = new SpeechSynthesisUtterance("This is the desired text to be spoken.");
+  window.speechSynthesis.speak(tts);
+   window.location.href = "services.html";
+  });
+  
 navigate.addEventListener("click", function () {
   console.log("clicked navigate");
   window.location.href = "navigate.html";

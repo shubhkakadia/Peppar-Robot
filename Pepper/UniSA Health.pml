@@ -80,24 +80,24 @@
     </Topics>
     <IgnoredPaths>
         <Path src="html/pages/second" />
+        <Path src="html/pages/first/speechPathology.html" />
+        <Path src="html/pages/NDIS.html" />
+        <Path src="html/pages/second/occupationalTherapy.html" />
+        <Path src="html/pages/second/exercisePhysiology.html" />
+        <Path src="html/pages/second/header.png" />
+        <Path src="html/pages/second/allServices.css" />
+        <Path src="html/pages/first/header.png" />
+        <Path src="html/pages/first/exercisePhysiology.html" />
+        <Path src="html/pages/second/speechPathology.html" />
         <Path src="html/pages/first/podiatry.html" />
-        <Path src="html/pages/first" />
+        <Path src="html/pages/first/physiotherapy.html" />
         <Path src="html/pages/second/dietetics.html" />
         <Path src="html/pages/second/physiotherapy.html" />
-        <Path src="html/pages/second/header.png" />
-        <Path src="html/pages/second/speechPathology.html" />
-        <Path src="html/pages/first/physiotherapy.html" />
-        <Path src="html/pages/first/speechPathology.html" />
+        <Path src="html/pages/first" />
         <Path src="html/pages/second/podiatry.html" />
-        <Path src="html/pages/first/header.png" />
-        <Path src="html/pages/childrensHealth.html" />
         <Path src="html/pages/first/occupationalTherapy.html" />
-        <Path src="html/pages/second/occupationalTherapy.html" />
-        <Path src="html/pages/second/allServices.css" />
-        <Path src="html/pages/NDIS.html" />
+        <Path src="html/pages/childrensHealth.html" />
         <Path src="html/pages/first/allServices.css" />
-        <Path src="html/pages/first/exercisePhysiology.html" />
-        <Path src="html/pages/second/exercisePhysiology.html" />
     </IgnoredPaths>
     <Translations auto-fill="en_US">
         <Translation name="translation_en_US" src="translations/translation_en_US.ts" language="en_US" />
