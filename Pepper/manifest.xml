@@ -15,7 +15,7 @@
  <contents>
   <behaviorContent path="behavior_1">
    <userRequestable/>
-   <nature>interactive</nature>
+   <nature>solitary</nature>
    <loadingResponses>
     <sentence lang="en_US">Don't be shy! Come say hi!</sentence>
     <sentence lang="en_US">Hellooo</sentence>
