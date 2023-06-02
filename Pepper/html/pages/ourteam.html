@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=1280, user-scalable=no" />
+    <title>Our Team</title>
+    <link rel="stylesheet" href="../css/services.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <script src="../js/robotutils.js"></script>
+    <script>
+      RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
+        ALSpeechRecognition.pause(true);
+
+        ALTextToSpeech.say(
+          "Here is the list of our capable staff here in Elizabeth!"
+        );
+        ALSpeechRecognition.pause(false);
+      });
+    </script>
+
+    <div>
+      <div>
+        <div>
+          <img src="../assets/header.png" height="160px" width="auto">
+      </div>
+        <div class="center">
+          <div>
+            <div style="font-size: 3.5vw; margin-top: 15%; margin-bottom: 5%">
+              Sample Our Team
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <button id="backbtn" onclick="window.location.href='menu.html'">
+            Go Back
+          </button>
+        </div>
+
+        <div class="container">
+          <div>
+            <img
+              src="../assets/pepperLookDown.png"
+              style="width: 30%; height: 30%; float: right"
+            />
+          </div>
+          <div class="bubble left">
+            Meet our amazing team! Aren't they handsome and pretty? Learn more
+            about them by scrolling the screen!
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                style="margin-bottom: 5px"
+                src="../assets/ourteam/dr-brenton1.jpg"
+                alt="podiatry"
+              />
+              <h5 class="card-title">DR BRENTON MARTIN</h5>
+              <p class="card-text">MBBS, DipRACOG</p>
+
+              <p class="card-text">
+                Dr Martin is an experienced GP, with many years of both rural
+                and city experience, which has provided him with a broad scope
+                of practice and seen him develop a wide range of clinical
+                interests. Over the last 15 years he has worked in both
+                Yankalilla and Adelaide, and has developed a passion for working
+                with students and University staff.
+              </p>
+            </div>
+          </div>
+
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                style="margin-bottom: 5px"
+                src="../assets/ourteam/dr-joanne1.jpg"
+                alt="podiatry"
+              />
+              <h5 class="card-title">DR JOANNE CHEW</h5>
+              <p class="card-text">MBBS, FRACGP, DCH</p>
+              <p class="card-text">
+                Joanne enjoys the breadth of general practice and has a strong
+                interest in women’s, mental and preventative health. She also
+                holds a Diploma of Child Health and is accredited to insert and
+                remove implanons. Joanne grew up in Malaysia, and completed her
+                medical degree at The University of Adelaide. She is a fellow of
+                the RACGP, and is happily married and with 2 young boys.
+              </p>
+            </div>
+          </div>
+
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                style="margin-bottom: 5px"
+                src="../assets/ourteam/dr-zori1.jpg"
+                alt="podiatry"
+              />
+              <h5 class="card-title">DR ZORI PENKOFF</h5>
+              <p class="card-text">MBBS, FRACGP</p>
+              <p class="card-text">
+                Zori was awarded RACGP Fellowship in 2016 after completing her
+                rotations in a number of GP practices in Adelaide and regional
+                South Australia. Zori previously worked in a number of hospital
+                posts in Adelaide, Darwin, NT and the United Kingdom, gaining
+                experience in Emergency Medicine, General Medicine, Obstetrics
+                and Gynaecology, Infectious Diseases and Microbiology.
+              </p>
+            </div>
+          </div>
+
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                style="margin-bottom: 5px"
+                src="../assets/ourteam/dr-deepti1.jpg"
+                alt="podiatry"
+              />
+              <h5 class="card-title">DR DEEPTI SINGHAL</h5>
+              <p class="card-text">MBBS, FRACGP, PhD Medicine</p>
+              <p class="card-text">
+                Dr Deepti Singhal is a General Practitioner and a Fellow of the
+                RACGP. She enjoys practicing a broad range of medicine, with key
+                interests in general and preventative medicine. She has been an
+                overseas medical student while pursuing her PhD in Medicine at
+                the University of Adelaide, and therefore is particularly
+                interested in looking after the health of students from
+                overseas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                style="margin-bottom: 5px"
+                src="../assets/ourteam/dr-john1.jpg"
+                alt="podiatry"
+              />
+              <h5 class="card-title">DR JOHN SETCHELL</h5>
+              <p class="card-text">BSC, PHD, B.M.B.S</p>
+              <p class="card-text">
+                Previously the Medical Director at the Central Operations
+                section of the Royal Flying Doctor Service of Australia, John is
+                now tutoring first and second year medical students in the
+                Problem Based Learning course at Flinders University, and is
+                provides clinical locum services at the UniSA Medical Health
+                Clinic, as well as occasional locum services to RFDS Primary
+                Care remote clinics.
+              </p>
+            </div>
+          </div>
+
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                style="margin-bottom: 5px"
+                src="../assets/ourteam/Dr-Sarah-Chin-edited.png"
+                alt="podiatry"
+              />
+              <h5 class="card-title">DR SARAH CHIN</h5>
+              <p class="card-text"></p>
+              <p class="card-text">
+                Sarah has interest in women’s and children’s health. She grew up
+                in Malaysia. She completed her medical degree at the University
+                of Adelaide. She then completed her GP training in the country
+                and obtained her RACGP fellowship in 2011. She has worked in a
+                few different practices over the last 10 years. She also likes
+                to spend quality time with her young children. In her free time,
+                she likes to do photo editing, playing badminton and quilting.
+              </p>
+            </div>
+          </div>
+
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                style="margin-bottom: 5px"
+                src="../assets/ourteam/ong.jpg"
+                alt="podiatry"
+              />
+              <h5 class="card-title">DR QI-ZHENG ONG</h5>
+              <p class="card-text">MBBS</p>
+              <p class="card-text">
+                Dr Qi (pron. ‘Chee’) is a GP trainee of the Royal Australian
+                College of General Practitioners. He was born in Singapore and
+                moved to Adelaide at a young age of 10. He graduated from the
+                University of Adelaide Medical School in 2018 and have spent the
+                last four years working across various hospitals in Adelaide,
+                Rural South Australia as well as in Canberra. He has experience
+                predominantly in trauma and emergency medicine, but takes
+                interest in all areas of general practice. In his spare time, he
+                enjoys indoor bouldering as well as skiing.
+              </p>
+            </div>
+          </div>
+
+          <div class="card text-center mb-3" style="width: 18rem">
+            <div class="card-body">
+              <img
+                class="card-img-top"
+                style="margin-bottom: 5px"
+                src="../assets/ourteam/gunawardana.jpg"
+                alt="podiatry"
+              />
+              <h5 class="card-title">DR PINIPA GUNAWARDANA</h5>
+              <p class="card-text"></p>
+              <p class="card-text">
+                Dr Pinipa Gunawardana is interested in all aspects of general
+                practice, particularly women’s health, mental health, preventive
+                health and sexual health. She completed her basic medical degree
+                in Sri Lanka. Dr Gunawardana has been working in Australia since
+                2014.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

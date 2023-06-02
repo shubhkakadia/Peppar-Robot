@@ -1,0 +1,94 @@
+topic: ~chat()
+language: enu
+
+# Defining extra concepts out of words or group of words
+concept:(hello) [hello "good day" greetings howdy]
+concept:(hi) ["Hi Pepper" hi hey "Hey Pepper" ]
+concept:(howdy) [howdy]
+concept:(pepper)[pepper]
+concept:(sup) ["what's up"]
+concept:(how) ["how are you"]
+concept:(menu) ["open menu" "go to menu" "go to home" home menu "go back to the menu" "go back" back]
+concept:(aboutus) ["open about us" "go to about us" "about us" "about"]
+concept:(survey) [survey feedback "go to survey" "go to feedback" "open feedback"]
+concept:(navigate) ["open maps" maps "show me map" "where to go" "go to maps" "go to the maps" map]
+concept:(ourteam) ["show me clinic's team" "doctors at clinic" "clinic staff" "go to team" team]
+concept:(service) ["clinic services" "services" "open services" "go to services" "what services"]
+concept:(goodbye) [bye goodbye "bye bye" "tata" "see you" adios cheerio "so long" farewell "have a nice day"]
+concept:(name) ["what's your name?" "who are you?" "what are you?"]
+concept:(help) ["help me" help]
+concept:(repeat) [repeat understand huh "what's that"]
+concept:(test) ["test"]
+concept:(sick) [unwell sick hurt injury injured pain]
+concept:(age)[age]
+
+#concept:(killswitch) ["who is the master"]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+u:(~pepper) That's me! ^gotoReactivate(help) 
+u:([~test e:displayTest]) $testing=1 Start testing
+u:([~hello e:displayMenu]) $onMenu=1 ^start(animations/Stand/Gestures/Hey_1) Hello, I'm Pepper, and I'm here to help you! Feel free to touch the buttons on my screen or even say it out-loud! Try speaking loud so I can hear you!^wait(animations/Stand/Gestures/Hey_1) ^gotoReactivate(help)
+u:([~hi e:displayMenu])$onMenu=1 Hello to you too, how can I help you today? would you like to know more about our services?.. or maybe have a look at the map?
+u:(~howdy) ~hello   ^gotoReactivate(help)
+u:(~sup) Doing great, thanks for asking! ^gotoReactivate(help)
+u:(~how) I'm fine thank you  ^gotoReactivate(help)
+u:([~menu e:displayMenu]) $onMenu=1 Welcome to the menu .^gotoReactivate(help)
+u:([~aboutus e:displayAboutus]) $onAboutus=1 This is where you can learn more about us. ^gotoReactivate(back)
+u:([~survey e:displayFeedback]) $onFeedback=1 Tell us more about your experience.^gotoReactivate(back)
+u:([~navigate e:displayNavigate])$onNavigate=1 Here is the map layout of the clinic. maybe you can find what you need. ^gotoReactivate(back)
+u:([~service e:displayServices]) $onServices=1^gotoReactivate(serviceOptions)
+u:([~ourteam e:displayOurteam]) $onOurteam=1 Here is the list of our capable staff here in Elizabeth!^gotoReactivate(back)
+
+u:([~goodbye e:displayGoodbye]) $onGoodbye=1 Thanks for chatting with me! See you soon!
+u:(~name) I'm Pepper.. and I am here to .. assist.. and interact with lovely people like you ^gotoReactivate(help)
+u:([~help e:displayHelp]) $onHelp=1 Here are some of the words I understand! If you find what you're looking for, then say it 
+u:([~sick]) Oh No! I'm so sorry to hear that! I can't cure you cause I'm just an assistant, but I do hope for your speedy recovery!
+u:(~age) let's guess your age! $onAgeTest1=1
+
+
+
+proposal: %help What can I help you with today?
+    u1:(_[map lost where]) Maybe this page can help? $onNavigate=1
+    u1:(_[feedback survey]) If it's regarding $1 , this is the page you need $onFeedback=1 please select the service you received and kindly give me a good review haha
+    u1:(_["where am i?"]) Your'e at a clinic in Elizabeth! Maybe this page can help you find your way around? $onNavigate=1
+    u1:(_["services"]) Oh! You seem curious about the services our clinic has to offer! Well feel free to learn more on this page! $onServices=1
+    u1:(_["who are you" "what are you" you])Me?.. Well I'm Pepper! Here to assist in any way I can!  ^gotoReactivate(help)
+    u1:(_[nothing no "I'm good" "thank you"])I'm glad to hear that everything is fine! $onGoodbye=1 I'll be here if you need me! $onStart=1
+    u1:(~repeat) Oh! I said  ^sameProposal
+    
+    
+proposal:%areYouSure Are you sure you want to go to the home page now? 
+    u1:(_[yes "i'm sure" sure okay mhmm ya yeah]) Okay, here we go! $onMenu=1 
+    u1:(_[no nah nope]) Oops ,my bad I must have heard wrong! Pardon me 
+    u1:(~repeat) I'll repeat for you. ^sameProposal
+
+.
+proposal:%back Feel free to click the back button or say it out loud and I'll navigate you back to the main page!
+    u1:(_[okay "I'm done" "go back" menu back home])Okay,^gotoReactivate(areYouSure)
+    u1:(_[no "not yet" wait]) Take your time!
+    u1:(~repeat) I'll repeat for you. ^sameProposal
+    
+proposal:%serviceOptions 
+    u1:(_["Child"]) $onChild=1
+    u1:(_[second "occupational therapy" OT]) OK
+    u1:(_[third physiotherapy physio])OK
+    u1:(_[fourth podiatry feet])OK
+    u1:(_[fifth "speech pathology" speech ])OK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

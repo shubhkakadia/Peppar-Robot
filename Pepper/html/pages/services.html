@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=1280, user-scalable=no" />
+  <title>Services</title>
+  <link rel="stylesheet" href="../css/services.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+</head>
+
+<body>
+  <script src="../js/robotutils.js"></script>
+  <script src="../js/services.js"></script>
+  <script>
+    RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
+
+      ALTextToSpeech.say(
+        "Here are the services we have available! Which service would you like to explore?"
+      );
+    });
+
+  </script>
+
+
+
+  <div>
+    <div>
+      <div>
+        <img src="../assets/header.png" height="160px" width="auto">
+      </div>
+      <div class="center">
+        <div>
+          <div style="font-size: 3.5vw; margin-top: 15%; margin-bottom: 15%">
+            Sample Services
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button id="backbtn" onclick="window.location.href='menu.html'">
+          Go Back
+        </button>
+      </div>
+
+      <div class="container">
+        <div>
+          <img src="../assets/pepperLookDown.png" style="width: 30%; height: 30%; float: right" />
+        </div>
+        <div class="bubble left">
+          Here are the services we have available! There's quite a few! So
+          feel free to scroll down to explore more!
+        </div>
+      </div>
+
+      <div class="cards" style="margin-right: 2%;">
+        <div id="children">
+          <div class="card text-center mb-3" style="width: 25rem">
+            <div class="card-body">
+              <img class="card-img-top" src="../assets/services/speechpath-banner.webp" alt="Exercise Physiology" />
+              <h5 class="card-title">Children’s health</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+
+        <div id="NDISHealth" onclick="window.location.href='NDIS.html'">
+          <div class="card text-center mb-3" style="width: 25rem">
+            <div class="card-body">
+              <img class="card-img-top" src="../assets/services/ot-banner.webp" alt="ot" />
+              <h5 class="card-title">NDIS health</h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+
+        <div id="healthyAging"class="card text-center mb-3" style="width: 25rem">
+          <div class="card-body">
+            <img class="card-img-top" src="../assets/services/physio-banner.webp" alt="physio" />
+            <h5 class="card-title">Healthy Ageing </h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <div id="rehab" class="cards" style="margin-right: 2%;">
+
+
+    <div class="card text-center mb-3" style="width: 25rem">
+      <div class="card-body">
+        <img class="card-img-top" src="../assets/services/podiatry-banner.webp" alt="podiatry" />
+        <h5 class="card-title">Rehabilitation health </h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+
+    <div id="sports"class="card text-center mb-3" style="width: 25rem">
+      <div class="card-body">
+        <img class="card-img-top" src="../assets/services/exphys-banner.webp" alt="speechpath" />
+        <h5 class="card-title">Sports health</h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+
+    <div class="card text-center mb-3" style="width: 25rem;border-color: white;">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </div>
+</body>
+
+</html>

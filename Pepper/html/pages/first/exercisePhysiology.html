@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Exercise Physiology</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./allServices.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <img src="./header.png" height="160px" width="auto">
+    </div>
+
+
+    <div>
+        <button id="backbtn" style="margin-top: 5%; margin-left: 1%;"
+            onclick="window.location.href='../services.html'">
+            Go Back
+        </button>
+    </div>
+
+    <div class="container" style="margin-bottom: 5%">
+        <div>
+            <div style="font-size: 3.5vw; margin-top: 6%; margin-bottom: 2% ;margin-left:1%">
+                Exercise Physiology
+            </div>
+            <div class="container" >
+                <strong p style="color: red;">To meet current South Australian Government Restrictions, masks are required when
+                    visiting this clinic. Working with you to tailor exercise plans to suit your needs.</p></strong>
+            </div>
+            <div class="container">
+                <p>Working with children living with, or at risk of developing chronic health conditions such as childhood obesity, diabetes, asthma, chronic pain or any disability that impedes participation in physical activity. </p>
+            </div>
+            <div class="container">
+                <p>Appointments are essential (please note in most cases for Accredited Exercise Physiology services, a
+                    referral from your General Practitioner or medical specialist is required).</p>
+            </div>
+            <br>
+
+
+
+
+            <button class="collapsible">Services</button>
+            <div class="content">
+                <div style="margin-left: 2%;">
+                    <br>
+                    <strong p>Our services are benificial for the management of:</strong></p>
+                    <li>cardiovascular disease/dysfunction</li>
+                    <li>chronic fatigue pathologies</li>
+                    <li>hormonal dysfunction</li>
+                    <li>metabolic disease/dysfunction</li>
+                    <li>musculoskeletal disease/dysfunction</li>
+                    <li>neurological, psychological and respiratory diseases</li>
+                    <br>
+                    <p>We offer practical exercise advice and programs that will equip you with the skills to maintain
+                        appropriate exercise habits, long term. Changes to everyday behaviour including the
+                        addition/modification of physical activity habits are not easily achieved. Our staff recognise
+                        this and will assist by helping to identify and work around any barriers in order to achieve
+                        your specific health goals.</p>
+                    <br>
+                    <p>Our service is tailored to suit your individual needs and preferences, and is designed to be
+                        performed by you from home or within an exercise training facility.</p>
+                    <br>
+                    <p>Please wear comfortable, non-restrictive clothing and suitable footwear to your appointment, and
+                        bring any relevant medical information with you such as specialist or x-ray reports (not films).
+                    </p>
+                    
+                </div>
+                <br>
+
+            </div>
+            <button class="collapsible">Fees</button>
+            <div class="content" style="background-color: white;">
+                <br>
+                <strong p>Student Delivered Services</strong>
+                <p>Student services are supervised by accredited exercise physiologists</p>
+                <table>
+                    <tr>
+                      <th>Service</th>
+                      <th>Standard Fee</th>
+                      <th>Concession Fee</th>
+                    </tr>
+                    <tr>
+                      <td>Initial consultation</td>
+                      <td>$20</td>
+                      <td>$10</td>
+                    </tr>
+                    <tr>
+                      <td>Subsequent consultation</td>
+                      <td>$15</td>
+                      <td>$10</td>
+                    </tr>
+                    <tr>
+                      <td>Small groups exercise session (max. 3 people)</td>
+                      <td>$12pp</td>
+                      <td>$10</td>
+                    </tr>
+                    <tr>
+                      <td>Large groups exercise session (max. 12 people)</td>
+                      <td>$7pp</td>
+                      <td>$5</td>
+                    </tr>
+                  
+                  </table>
+                  <br>
+            </div>
+            <button class="collapsible">FAQs</button>
+            <div class="content">
+                <br>
+                <strong p>What is an Accredited Exercise Physiologist (AEP)?</p></strong>
+                <p>AEPs are allied health professionals that specialise in the prescription and monitoring of exercise behaviour for the management and prevention chronic diseases and disabilities. The accreditation and professional conduct of the AEP is overseen by Exercise & Sports Science Australia. AEPs base exercise prescription for disease management and prevention on up to date scientific evidence and tailor it to accommodate an individual's capacity and goals.</p>
+                <br>
+
+                <strong p>Can High Performance services be tailored to individual or group needs?</p></strong>
+                <p>If you are interested in a combination of our services, we can tailor packages to suit individual or group needs. We can also provide professional advice on the most suitable test for you or your team.</p>
+                <br>
+
+            </div>
+            <button class="collapsible">Teaching and Learning</button>
+            <div class="content">
+                <br>
+                <p>In addition to providing you with valuable client care, the Clinic delivers quality clinical education to UniSA students — our next generation of healthcare professionals. Educated in state-of-the-art facilities, students gain invaluable practical experience and exposure to a wide range of client needs.</p>
+                <br>
+                <p>If you are a current UniSA student and are interested in observing what happens in an Exercise Physiology clinic then we would love you to volunteer your time in gaining exposure to the industry. Depending of your level of experience you will also be able to implement and apply the skills and knowledge that you have learned to date. You may even be able to log ESSA hours towards gaining your qualifications!</p>
+                <br>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+
+
+    <!-- <strong p> Working with you to tailor exercise plans to suit your needs. </p></strong>
+    <p>Based at UniSA’s City East, City West, and Magill campuses, the Exercise Physiology Clinic offers
+        specialist exercise prescription services to the community to assist with the management and
+        prevention of chronic health conditions, musculoskeletal rehabilitation, medical conditions,
+        disabilities and mental health conditions.</p>
+    <p>Exercise physiology services are provided by final year undergraduate exercise physiology students
+        under the supervision of accredited exercise physiologists, or directly by accredited exercise
+        physiologists.</p>
+    <p>Appointments are essential (please note in most cases for Accredited Exercise Physiology services, a
+        referral from your General Practitioner or medical specialist is required).</p> -->
+
+
+
+</body>
+
+</html>
