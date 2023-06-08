@@ -3,6 +3,7 @@
     <Manifest src="manifest.xml" />
     <BehaviorDescriptions>
         <BehaviorDescription name="behavior" src="behavior_1" xar="behavior.xar" />
+        <BehaviorDescription name="behavior" src="behavior_1/ExampleDialog" xar="behavior.xar" />
     </BehaviorDescriptions>
     <Dialogs>
         <Dialog name="ExampleDialog" src="behavior_1/ExampleDialog/ExampleDialog.dlg" />
@@ -71,35 +72,31 @@
         <File name="userPic" src="html/assets/userPic.png" />
         <File name="dialog" src="html/css/dialog.css" />
         <File name="header" src="html/assets/header.png" />
-        <File name="services" src="html/js/services.js" />
         <File name="officialLogo" src="html/assets/officialLogo.png" />
-        <File name=".behavior.xar.38820" src="behavior_1/.behavior.xar.38820.csp" />
+        <File name="services" src="html/js/services.js" />
+        <File name="NDIS" src="html/pages/NDIS.html" />
+        <File name="childrensHealth" src="html/pages/childrensHealth.html" />
+        <File name="allServices" src="html/pages/first/allServices.css" />
+        <File name="exercisePhysiology" src="html/pages/first/exercisePhysiology.html" />
+        <File name="header" src="html/pages/first/header.png" />
+        <File name="occupationalTherapy" src="html/pages/first/occupationalTherapy.html" />
+        <File name="physiotherapy" src="html/pages/first/physiotherapy.html" />
+        <File name="podiatry" src="html/pages/first/podiatry.html" />
+        <File name="speechPathology" src="html/pages/first/speechPathology.html" />
+        <File name="allServices" src="html/pages/second/allServices.css" />
+        <File name="dietetics" src="html/pages/second/dietetics.html" />
+        <File name="exercisePhysiology" src="html/pages/second/exercisePhysiology.html" />
+        <File name="header" src="html/pages/second/header.png" />
+        <File name="occupationalTherapy" src="html/pages/second/occupationalTherapy.html" />
+        <File name="physiotherapy" src="html/pages/second/physiotherapy.html" />
+        <File name="podiatry" src="html/pages/second/podiatry.html" />
+        <File name="speechPathology" src="html/pages/second/speechPathology.html" />
     </Resources>
     <Topics>
         <Topic name="ExampleDialog_enu" src="behavior_1/ExampleDialog/ExampleDialog_enu.top" topicName="ExampleDialog" language="en_US" />
         <Topic name="chat_enu" src="chat/chat_enu.top" topicName="chat" language="en_US" />
     </Topics>
-    <IgnoredPaths>
-        <Path src="html/pages/second/allServices.css" />
-        <Path src="html/pages/first/header.png" />
-        <Path src="html/pages/first/exercisePhysiology.html" />
-        <Path src="html/pages/first/speechPathology.html" />
-        <Path src="html/pages/first/allServices.css" />
-        <Path src="html/pages/second/physiotherapy.html" />
-        <Path src="html/pages/first/podiatry.html" />
-        <Path src="html/pages/second/occupationalTherapy.html" />
-        <Path src="html/pages/second/speechPathology.html" />
-        <Path src="html/pages/first/occupationalTherapy.html" />
-        <Path src="html/pages/first/physiotherapy.html" />
-        <Path src="html/pages/second" />
-        <Path src="html/pages/second/exercisePhysiology.html" />
-        <Path src="html/pages/first" />
-        <Path src="html/pages/second/header.png" />
-        <Path src="html/pages/second/dietetics.html" />
-        <Path src="html/pages/second/podiatry.html" />
-        <Path src="html/pages/childrensHealth.html" />
-        <Path src="html/pages/NDIS.html" />
-    </IgnoredPaths>
+    <IgnoredPaths />
     <Translations auto-fill="en_US">
         <Translation name="translation_en_US" src="translations/translation_en_US.ts" language="en_US" />
     </Translations>

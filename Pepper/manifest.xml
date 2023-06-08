@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package version="0.0.1" uuid="unisahealth-f9c4a4">
+<package version="0.0.1" uuid="unisahealth-1c26cd">
  <names>
   <name lang="en_US">Untitled</name>
  </names>
@@ -13,10 +13,24 @@
   <language>en_US</language>
  </descriptionLanguages>
  <contents>
-  <dialogContent typeVersion="1.0" topicName="ExampleDialog">
+  <behaviorContent path="behavior_1">
+   <userRequestable/>
+   <nature>interactive</nature>
+   <loadingResponses>
+    <sentence lang="en_US">Don't be shy! Come say hi!</sentence>
+    <sentence lang="en_US">Hellooo</sentence>
+   </loadingResponses>
+   <autonomous>
+    <condition purpose="launchTrigger"><![CDATA[('Launchpad/NumPeopleZone2' > 0)~ 5
+&&
+('Launchpad/PreviousActivity'!= "unisahealth-f9c4a4/behavior_1"]]></condition>
+   </autonomous>
+   <permissions/>
+  </behaviorContent>
+  <dialogContent topicName="ExampleDialog" typeVersion="1.0">
    <topic language="en_US" path="behavior_1/ExampleDialog/ExampleDialog_enu.top"/>
   </dialogContent>
-  <dialogContent typeVersion="1.0" topicName="chat">
+  <dialogContent topicName="chat" typeVersion="1.0">
    <topic language="en_US" path="chat/chat_enu.top"/>
   </dialogContent>
  </contents>
