@@ -1,9 +1,8 @@
-const children = document.getElementById("children");
-const NDISHealth = document.getElementById("NDISHealth");
-const healthyAging = document.getElementById("healthyAging");
+const exercisePhysiology = document.getElementById("exercisePhysiology");
+const occupationalTherapy = document.getElementById("occupationalTherapy");
+const physiotherapy = document.getElementById("physiotherapy");
 const podiatry = document.getElementById("podiatry");
 const speechPathology = document.getElementById("speechPathology");
-const ChildOccupationalTherapy = document.getElementById("ChildOccupationalTherapy");
 
 // RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
 //   ALSpeechRecognition.pause(true);
@@ -13,28 +12,28 @@ const ChildOccupationalTherapy = document.getElementById("ChildOccupationalThera
 //   ALSpeechRecognition.pause(false);
 // });
 
-children.addEventListener("click", function () {
-  console.log("clicked children");
-  window.location.href = "childrensHealth.html";
+exercisePhysiology.addEventListener("click", function () {
+  console.log("clicked exercisePhysiology");
+  window.location.href = "exercisePhysiology.html";
 });
 
-NDISHealth.addEventListener("click", function () {
-  console.log("clicked NDISHealth");
-  window.location.href = "NDIS.html";
+occupationalTherapy.addEventListener("click", function () {
+  console.log("clicked occupationalTherapy");
+  window.location.href = "occupationalTherapy.html";
 });
 
-healthyAging.addEventListener("click", function () {
-  console.log("clicked healthyAging");
-  window.location.href = "healthyAging.html";
+physiotherapy.addEventListener("click", function () {
+  console.log("clicked physiotherapy");
+  window.location.href = "feedback.html";
 });
 
-rehab.addEventListener("click", function () {
-  console.log("clicked rehab");
-  window.location.href = "rehab.html";
+podiatry.addEventListener("click", function () {
+  console.log("clicked podiatry");
+  window.location.href = "ourteam.html";
 });
 
-sports.addEventListener("click", function () {
-  console.log("clicked sports");
-  window.location.href = "sports.html";
+speechPathology.addEventListener("click", function () {
+  console.log("clicked speechPathology");
+  window.location.href = "aboutus.html";
 });
 

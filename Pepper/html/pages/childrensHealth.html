@@ -17,15 +17,21 @@
   <script src="../js/services.js"></script>
   <script>
     RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
+
       ALTextToSpeech.say(
-        "Here are the subservices we have for Children's Health."
+        "Here's what we have for childrens health."
       );
+
 
     });
 
   </script>
 
-
+  <script>
+    RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
+      ALSpeechRecognition.pause(false);
+    });
+  </script>
 
   <div>
     <div>
@@ -45,7 +51,11 @@
           Go Back
         </button>
       </div>
-
+      <div>
+        <button id="homebtn" onclick="window.location.href='menu.html'">
+          Go Home
+        </button>
+      </div>
       <div class="container" >
         <div>
           <img src="../assets/pepperLookDown.png" style="width: 30%; height: 30%; float: right" />
@@ -56,7 +66,7 @@
       </div>
 
       <div class="cards" style="margin-right: 2%;">
-        <div id="ChildOccupationalTherapy" onclick="window.location.href='./first/occupationalTherapy.html'">
+        <div id="exercisePhysiology" onclick="window.location.href='./first/occupationalTherapy.html'">
           <div class="card text-center mb-3" style="width: 25rem">
             <div class="card-body">
               <img class="card-img-top" src="../assets/services/speechpath-banner.webp" alt="Exercise Physiology" />
