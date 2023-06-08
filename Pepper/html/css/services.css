@@ -39,32 +39,32 @@ opacity: .5;
   margin-left:2%
 }
 
-#homebtn {
-  top: 15%;
-  position: absolute;
-  background-color: white;
-  border: 2px solid #1a1a1a;
-  border-radius: 15px;
-  box-sizing: border-box;
-  color: #3b3b3b;
-  display: inline-block;
-  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
-  font-weight: 600;
-  padding: 16px;
-  text-align: center;
-  width: 10%;
-  margin-top: 9.25%;
-  margin-left: 15%;
-}
+  #homebtn {
+    top: 15%;
+    position: absolute;
+    background-color: white;
+    border: 2px solid #1a1a1a;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #3b3b3b;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    padding: 16px;
+    text-align: center;
+    width: 10%;
+    margin-top: 9.25%;
+    margin-left: 15%;
+  }
 
-
-.container {
-  display:flex;
-  align-items: last baseline; 
-  justify-content: first baseline;
- }
+  
+  .container {
+    display:flex;
+    align-items: last baseline; 
+    justify-content: first baseline;
+   }
 .bubble {
   --r: 25px; /* the radius */
   --t: 30px; /* the size of the tail */

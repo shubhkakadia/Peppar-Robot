@@ -18,13 +18,11 @@
   <body>
     <script src="../js/robotutils.js"></script>
     <script>
-      RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
-        ALSpeechRecognition.pause(true);
+      RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
 
         ALTextToSpeech.say(
           "Here is the list of our capable staff here in Elizabeth!"
         );
-        ALSpeechRecognition.pause(false);
       });
     </script>
 

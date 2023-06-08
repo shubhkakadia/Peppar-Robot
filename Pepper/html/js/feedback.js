@@ -1,12 +1,3 @@
-const utilityFunction = function (callback) {
-  console.log(RobotUtils);
-  RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
-    ALSpeechRecognition.pause(true);
-
-    ALTextToSpeech.say("I will take over the world");
-    ALSpeechRecognition.pause(false);
-  });
-};
 
 RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
   ALTextToSpeech.say("Tell us more about your experience.");

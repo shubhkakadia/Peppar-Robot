@@ -17,12 +17,10 @@
   <script src="../js/services.js"></script>
   <script>
     RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
-      ALSpeechRecognition.pause(true);
 
       ALTextToSpeech.say(
-        "Here are the list of services elizabeth clinic has to offer."
+        "Here's what we have for childrens health."
       );
-
 
 
     });
@@ -53,7 +51,11 @@
           Go Back
         </button>
       </div>
-
+      <div>
+        <button id="homebtn" onclick="window.location.href='menu.html'">
+          Go Home
+        </button>
+      </div>
       <div class="container" >
         <div>
           <img src="../assets/pepperLookDown.png" style="width: 30%; height: 30%; float: right" />

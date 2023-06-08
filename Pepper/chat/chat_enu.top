@@ -8,7 +8,7 @@ concept:(howdy) [howdy]
 concept:(pepper)[pepper]
 concept:(sup) ["what's up"]
 concept:(how) ["how are you"]
-concept:(menu) ["open menu" "go to menu" "go to home" home menu "go back to the menu" "go back" back]
+concept:(menu) ["open menu" "go to menu" "go to home" home menu "go back to the menu" "go back" back back]
 concept:(aboutus) ["open about us" "go to about us" "about us" "about"]
 concept:(survey) [survey feedback "go to survey" "go to feedback" "open feedback"]
 concept:(navigate) ["open maps" maps "show me map" "where to go" "go to maps" "go to the maps" map]
@@ -71,26 +71,12 @@ proposal:%back Feel free to click the back button or say it out loud and I'll na
     u1:(_[no "not yet" wait]) Take your time!
     u1:(~repeat) I'll repeat for you. ^sameProposal
     
-    
-proposal: %help2
-    u1:(_[map lost where]) Maybe this page can help? $onNavigate=1
-    u1:(_[feedback survey]) If it's regarding $1 , this is the page you need $onFeedback=1 please select the service you received and kindly give me a good review haha
-    u1:(_["where am i?"]) Your'e at a clinic in Elizabeth! Maybe this page can help you find your way around? $onNavigate=1
-    u1:(_["services"]) Oh! You seem curious about the services our clinic has to offer! Well feel free to learn more on this page! $onServices=1
-    u1:(_["who are you" "what are you" you])Me?.. Well I'm Pepper! Here to assist in any way I can!  ^gotoReactivate(help)
-    u1:(_[nothing no "I'm good" "thank you"])I'm glad to hear that everything is fine! $onGoodbye=1 I'll be here if you need me! $onStart=1
-    u1:(~repeat) Oh! I said  ^sameProposal
-    
-#proposal:%serviceOptions 
-#    u1:(_["Child"]) $onChild=1
-#    u1:(_[second "occupational therapy" OT]) OK
-#    u1:(_[third physiotherapy physio])OK
-#    u1:(_[fourth podiatry feet])OK
-#    u1:(_[fifth "speech pathology" speech ])OK
-
-
-
-
+proposal:%serviceOptions 
+    u1:(_["Child"]) $onChild=1
+    u1:(_[second "occupational therapy" OT]) OK
+    u1:(_[third physiotherapy physio])OK
+    u1:(_[fourth podiatry feet])OK
+    u1:(_[fifth "speech pathology" speech ])OK
 
 
 
