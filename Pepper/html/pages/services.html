@@ -19,7 +19,7 @@
     RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
 
       ALTextToSpeech.say(
-        "Here are the services we have available! Which service would you like to explore?"
+        "Here are the list of services elizabeth clinic has to offer."
       );
     });
 
@@ -57,7 +57,7 @@
       </div>
 
       <div class="cards" style="margin-right: 2%;">
-        <div id="children">
+        <div id="exercisePhysiology" onclick="window.location.href='childrensHealth.html'">
           <div class="card text-center mb-3" style="width: 25rem">
             <div class="card-body">
               <img class="card-img-top" src="../assets/services/speechpath-banner.webp" alt="Exercise Physiology" />
@@ -67,7 +67,7 @@
           </div>
         </div>
 
-        <div id="NDISHealth" onclick="window.location.href='NDIS.html'">
+        <div id="occupationalTherapy" onclick="window.location.href='NDIS.html'">
           <div class="card text-center mb-3" style="width: 25rem">
             <div class="card-body">
               <img class="card-img-top" src="../assets/services/ot-banner.webp" alt="ot" />
@@ -77,7 +77,7 @@
           </div>
         </div>
 
-        <div id="healthyAging"class="card text-center mb-3" style="width: 25rem">
+        <div class="card text-center mb-3" style="width: 25rem">
           <div class="card-body">
             <img class="card-img-top" src="../assets/services/physio-banner.webp" alt="physio" />
             <h5 class="card-title">Healthy Ageing </h5>
@@ -91,7 +91,7 @@
     </div>
   </div>
 
-  <div id="rehab" class="cards" style="margin-right: 2%;">
+  <div class="cards" style="margin-right: 2%;">
 
 
     <div class="card text-center mb-3" style="width: 25rem">
@@ -102,7 +102,7 @@
       </div>
     </div>
 
-    <div id="sports"class="card text-center mb-3" style="width: 25rem">
+    <div class="card text-center mb-3" style="width: 25rem">
       <div class="card-body">
         <img class="card-img-top" src="../assets/services/exphys-banner.webp" alt="speechpath" />
         <h5 class="card-title">Sports health</h5>
