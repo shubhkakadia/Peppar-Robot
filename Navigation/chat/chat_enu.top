@@ -1,0 +1,15 @@
+topic: ~chat()
+language: enu
+
+# Defining extra concepts out of words or group of words
+concept:(hello) [hello hi hey "good morning" greetings]
+concept:(navExit) ["take me to exit"]
+concept:(navPG) ["take me to room W1 14"]
+
+# Catching inputs and triggering outputs
+#u:(e:onStart) $onStopped=1
+
+# Replying to speech
+u:(~hello) ~hello
+u:([~navExit e:input_navExit]) $output_navExit=1 follow me, just make sure nothing is on my way.
+u:([~navPG e:input_navPG]) $output_navPG=1 sure, I can take you to Postgraduates Students room just follow me and make sure nothing is in my way.
