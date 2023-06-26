@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+
+// Define the feedback schema
 const feedbackSchema = new mongoose.Schema(
   {
     ID: {
@@ -27,4 +29,6 @@ const feedbackSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+
+// Export the feedback model
 module.exports = mongoose.model("feedback", feedbackSchema);

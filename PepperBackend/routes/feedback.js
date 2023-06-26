@@ -1,9 +1,12 @@
 const express = require("express");
-var router = express();
+const router = express.Router(); // Use Router instead of the app instance
 const { register, read } = require("../controller/feedback");
 
-const bodyparser = require("body-parser");
-router.use(bodyparser.json());
-router.post("/register", register);
-router.get("/get", read);
+const bodyParser = require("body-parser");
+router.use(bodyParser.json());
+
+// Define the routes
+router.post("/register", register); // Handle POST requests to /register
+router.get("/get", read); // Handle GET requests to /get
+
 module.exports = router;

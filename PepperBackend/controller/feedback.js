@@ -1,14 +1,11 @@
 const feedback = require("../model/feedback");
 
+// Register a new feedback
 const register = (req, res) => {
-  const ID = req.body.ID;
-  const Name = req.body.Name;
-  const ServiceType = req.body.ServiceType;
-  const Comments = req.body.Comments;
-  const Rating = req.body.Rating;
-  const Conversation = req.body.Conversation;
+  const { ID, Name, ServiceType, Comments, Rating, Conversation } = req.body;
 
-  const newFeedback = feedback({
+  // Create a new instance of the feedback model
+  const newFeedback = new feedback({
     ID,
     Name,
     ServiceType,
@@ -17,12 +14,13 @@ const register = (req, res) => {
     Conversation,
   });
 
+  // Save the new feedback to the database
   newFeedback
     .save()
     .then((data) => {
       console.log("Created new feedback in the database.");
       const response = {
-        satus: "Success",
+        status: "Success",
         response: data,
       };
       res.send(response);
@@ -36,7 +34,9 @@ const register = (req, res) => {
     });
 };
 
+// Read all feedback
 const read = (req, res) => {
+  // Find all feedback in the database
   feedback
     .find()
     .then((data) => {

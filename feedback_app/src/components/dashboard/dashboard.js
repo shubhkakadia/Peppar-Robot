@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "../style.css";
 import Navbar from "../navbar/navbar";
 import { useDispatch, useSelector } from "react-redux";
 import { Doughnut, Line } from "react-chartjs-2";

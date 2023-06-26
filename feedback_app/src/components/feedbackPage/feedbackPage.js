@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { readFeedbacks } from "../../state/actions/readFeedbacks";
 import Table from "../table/table";
-import "../style.css";
 import { selectFeedback } from "../../state/actions/selectFeedback";
 import Navbar from "../navbar/navbar";
 

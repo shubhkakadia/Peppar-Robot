@@ -1,12 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../../state/actions/authActions';
-import './LoginPage.css';
+import { login, logout } from '../../state/actions/authActions';
 import { useNavigate } from 'react-router-dom';
 
 
 const LoginPage = () => {
-  // const selector = useSelector();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [usernameError, setUsernameError] = useState('');
@@ -20,6 +18,11 @@ const LoginPage = () => {
       dispatch(login(username, password));
     }
   };
+
+  useEffect(() => {
+    dispatch(logout());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   useEffect(() => {
     if(loggedInUser){

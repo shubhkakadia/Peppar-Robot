@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { logout } from '../../state/actions/authActions';
-import './navbar.css'
+
 export default function Navbar() {
   const dispatch = useDispatch();
   const handleLogout = () => {

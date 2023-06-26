@@ -11,6 +11,7 @@ function App() {
   console.log(isLoggedIn);
   return (
     <div className="App">
+      {/* Add meta and link tags for styling and dependencies */}
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1"
@@ -25,22 +26,15 @@ function App() {
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
         crossOrigin="anonymous"
       ></link>
+
       <BrowserRouter>
         <Routes>
+          {/* Define the routes */}
           <Route path="/" element={<Navigate to="/login" replace />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<ProtectedRoutes> <Dashboard/> </ProtectedRoutes>} />
           <Route path="/feedbacks" element={<ProtectedRoutes> <FeedbackPage/> </ProtectedRoutes>} />
           <Route path="/login" element={<LoginPage />}/>
-          
-          {/* <Route path="/login" element={<LoginPage />} />
-          <Route path="/dashboard" element={isLoggedIn ? <Dashboard /> : <LoginPage />} />
-          <Route path="/" element={isLoggedIn ? <Dashboard /> : <LoginPage />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-
-          <Route path="/" element={<Navigate to="/dashboard" replace />} />
-          <Route path="/feedbacks" element={<FeedbackPage/>}/>
-          <Route path="/login" element={<LoginPage />}/> */}
         </Routes>
       </BrowserRouter>
     </div>
