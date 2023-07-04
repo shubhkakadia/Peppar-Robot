@@ -20,12 +20,16 @@ export default function Table(props) {
   const indexOfLastRecord = currentPage * recordsPerPage;
   const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
 
-  const currentRecords = feedbackData.slice(
-    indexOfFirstRecord,
-    indexOfLastRecord
-  );
+  const currentRecords =
+    feedbackData.length > 0
+      ? feedbackData.slice(indexOfFirstRecord, indexOfLastRecord)
+      : [];
+
   const nPages = Math.ceil(feedbackData.length / recordsPerPage);
-  const pageNumbers = [...Array(nPages + 1).keys()].slice(1);
+  const pageNumbers =
+    feedbackData.length > 0
+      ? [...Array(nPages).keys()].map((num) => num + 1)
+      : [];
 
   useEffect(() => {
     setFeedbackData(props.props);
@@ -44,13 +48,15 @@ export default function Table(props) {
   }, [selected_feedback]);
 
   useEffect(() => {
-    handleSearch();
+    if (Array.isArray(props.props)) {
+      handleSearch();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchText]);
 
   const handleSearch = () => {
     let arr = [];
-    if (props.props) {
+    if (Array.isArray(props.props)) {
       props.props?.forEach((item) => {
         if (
           item.Name?.toLowerCase().includes(searchText) ||
@@ -130,7 +136,7 @@ export default function Table(props) {
                 </tr>
               </thead>
               <tbody>
-                {currentRecords?.map((item, i) => {
+                {currentRecords.map((item, i) => {
                   return (
                     <tr key={i}>
                       <td>{item.ID}</td>
@@ -140,7 +146,7 @@ export default function Table(props) {
                           : item.Name}
                       </td>
                       <td>
-                        {item.Comments.length > 10
+                        {item.Comments && item.Comments.length > 10
                           ? item.Comments.substring(0, 10) + "..."
                           : item.Comments}
                       </td>
@@ -157,10 +163,10 @@ export default function Table(props) {
                         </button>
                       </td>
                       {/* <td>
-                    <button className="btn btn-success btn-sm">
-                      <i className="bi bi-pencil icon"></i>
-                    </button>
-                  </td> */}
+                        <button className="btn btn-success btn-sm">
+                          <i className="bi bi-pencil icon"></i>
+                        </button>
+                      </td> */}
                       <td>
                         <button
                           className="btn btn-danger btn-sm"
@@ -177,7 +183,7 @@ export default function Table(props) {
                 })}
               </tbody>
             </table>
-            {nPages > 1 ? (
+            {nPages > 1 && feedbackData.length > 0 ? (
               <ul className="pagination flexBetween">
                 <li className="page-item">
                   <div
@@ -222,7 +228,12 @@ export default function Table(props) {
             ></i>
           </>
         ) : (
-          <div>No Data found!!!</div>
+          <div>
+            {/* No Data found!!! */}
+            {feedbackData.length === 0 && !isLoading ? (
+              <div>No Data found!!!</div>
+            ) : null}
+          </div>
         )}
       </div>
       {viewFeedbackToggle ? (
@@ -272,3 +283,4 @@ export default function Table(props) {
     </div>
   );
 }
+
