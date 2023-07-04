@@ -1,7 +1,7 @@
 const FEEDBACKS = {
     load: "Feedback_load",
     success: "Feedback_success",
-    error: "Feedback_erroe"
+    error: "Feedback_error"
 }
 
 const SELECTED_FEEDBACK = {
