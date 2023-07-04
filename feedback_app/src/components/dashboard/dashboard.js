@@ -42,12 +42,14 @@ export default function Dashboard() {
     "December",
   ];
 
-  if (feedbackData) {
+  if (feedbackData && Array.isArray(feedbackData)) {
     allServices = [
       "All",
-      ...new Set(feedbackData?.map((feedback) => feedback.ServiceType)),
+      ...new Set(feedbackData.map((feedback) => feedback.ServiceType)),
     ];
-  }
+  } else {
+    allServices = ["All"]; // Provide a default value when feedbackData is not available
+  }  
 
   const DoughnutOptions = {
     plugins: {
@@ -107,7 +109,7 @@ export default function Dashboard() {
   }, [feedbackData, selectedService]);
 
   useEffect(() => {
-    if (empCounter !== feedbackData.length) {
+    if (feedbackData && feedbackData.length > 0 && empCounter !== feedbackData.length) {
       setTimeout(() => {
         setEmpCounter(empCounter + 1);
       }, counterSpeed);
@@ -116,7 +118,9 @@ export default function Dashboard() {
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [date]);
+  }, [date, feedbackData, empCounter]);
+  
+
 
   useEffect(() => {
     handleUsageLine();
@@ -131,14 +135,19 @@ export default function Dashboard() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  function handleHappinessPercentage(){
-    const ratingsArr = feedbackData.map(element => element.Rating);
-    const sum = ratingsArr.reduce((total, item) => total + item, 0);
-    setHappinessPercentage(parseInt((sum / ratingsArr.length)*20));
+  function handleHappinessPercentage() {
+    if (Array.isArray(feedbackData) && feedbackData.map) {
+      const ratingsArr = feedbackData.map((element) => element.Rating);
+      const sum = ratingsArr.reduce((total, item) => total + item, 0);
+      setHappinessPercentage(parseInt((sum / ratingsArr.length) * 20));
+    } else {
+      setHappinessPercentage(0);
+    }
   }
+  
 
   function handleRatingDognut() {
-    if (feedbackData) {
+    if (feedbackData && Array.isArray(feedbackData)) {
       let ratinglabel = [];
       let feedbackcount = [];
       let selectedData = [];
@@ -166,7 +175,7 @@ export default function Dashboard() {
   }
 
   function handleUsageLine() {
-    if (feedbackData) {
+    if (feedbackData && Array.isArray(feedbackData)) {
       let dates = [];
       let allDates = [];
       // Step 1: Extract createdAt date and convert to string
