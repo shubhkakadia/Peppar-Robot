@@ -56,7 +56,39 @@ const read = (req, res) => {
     });
 };
 
+const remove = (req, res) => {
+  const feedbackId = req.params.ID;
+
+  // Find the feedback by ID and remove it from the database
+  feedback
+    .findOneAndRemove({ ID: feedbackId }) // changed from findByIDandRemove to findOneAndRemove.
+    .then((data) => {
+      if (!data) {
+        const response = {
+          status: "Error",
+          response: "Feedback not found",
+        };
+        return res.status(404).send(response);
+      }
+
+      console.log("Deleted feedback from the database.");
+      const response = {
+        status: "Success",
+        response: data,
+      };
+      res.send(response);
+    })
+    .catch((err) => {
+      const response = {
+        status: "Error cant delete",
+        response: err,
+      };
+      res.status(500).send(response);
+    });
+};
+
 module.exports = {
   register,
   read,
+  remove, // Add the remove function to the exports
 };
