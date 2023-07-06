@@ -17,6 +17,7 @@
   <script src="../js/services.js"></script>
   <script>
     RobotUtils.onServices(function (ALLeds, ALTextToSpeech, ALSpeechRecognition) {
+      ALSpeechRecognition.pause(true);
 
       ALTextToSpeech.say(
         "Here's what we have for childrens health."

@@ -59,14 +59,12 @@
     margin-left: 15%;
   }
 
-
   
   .container {
     display:flex;
     align-items: last baseline; 
     justify-content: first baseline;
    }
-   
 .bubble {
     --r: 25px; /* the radius */
     --t: 30px; /* the size of the tail */

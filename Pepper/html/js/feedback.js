@@ -1,3 +1,4 @@
+import ip from "./ip.json"
 RobotUtils.onServices(function (ALLeds, ALTextToSpeech) {
   ALTextToSpeech.say("Tell us more about your experience.");
 });
@@ -8,7 +9,7 @@ var currentYear = currentDate.getYear() + 1900;
 
 function FetchAPI(callback) {
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "http://192.168.0.29:3000/feedback/get", true);
+  xhr.open("GET", `http://${ip.ip}/feedback/get`, true);
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
       fetchData = JSON.parse(xhr.responseText).response;
@@ -89,7 +90,7 @@ function setValue(ratingvalue) {
 
     function post_req() {
       var xhr = new XMLHttpRequest();
-      var url = "http://192.168.0.29:3000/feedback/register";
+      var url = `http://${ip.ip}/feedback/register`;
       xhr.open("POST", url, true);
       xhr.setRequestHeader("Content-Type", "application/json");
       xhr.onreadystatechange = function () {
